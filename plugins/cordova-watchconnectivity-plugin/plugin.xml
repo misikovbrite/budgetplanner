@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-watchconnectivity-plugin"
+        version="1.0.1">
+
+  <name>cordova-watchconnectivity-plugin</name>
+
+  <engines>
+    <engine name="cordova" version=">=7.1.0"/>
+    <engine name="cordova-ios" version=">=4.4.0"/>
+  </engines>
+
+  <platform name="ios">
+    
+    <!-- WatchConnectivity Dependency -->
+    <framework src="WatchConnectivity.framework" />
+
+    <!-- Changes to .h and to .m are to be made on: 'cordova-watchconnectivity-plugin-source' -->
+    <header-file src="src/ios/WCiOS.h" target-dir="WCiOSPlugin" />
+    <source-file src="src/ios/WCiOS.m" target-dir="WCiOSPlugin" />	    
+
+    <!-- The 'feature name' value is then available on the www/*-plugin.js file -->
+    <config-file target="config.xml" parent="/*">
+      <feature name="WatchConnectivity">
+        <param name="ios-package" value="WCiOS" />
+      </feature>
+    </config-file>
+
+    <!-- The JS file that invokes the Objective-C lib -->
+    <js-module src="www/cordova-watchconnectivity-plugin.js" name="WatchConnectivity">
+      <clobbers target="cordova.WatchConnectivity" />
+      <clobbers target="window.WatchConnectivity" />
+    </js-module>
+
+  </platform>
+
+</plugin>

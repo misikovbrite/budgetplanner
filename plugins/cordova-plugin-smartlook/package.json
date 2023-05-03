@@ -1,0 +1,40 @@
+{
+  "name": "cordova-plugin-smartlook",
+  "version": "1.9.6",
+  "description": "Official Smartlook Cordova android plugin",
+  "cordova": {
+    "id": "cordova-plugin-smartlook",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smartlook/cordova-smartlook-plugin.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "smartlook",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smartlook/cordova-smartlook-plugin"
+  },
+  "homepage": "https://www.smartlook.com",
+  "types": "./www/cordova-plugin-smartlook.d.ts",
+  "main": "./www/cordova-plugin-smartlook.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsc -w",
+    "build": "tsc",
+    "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
+  },
+  "devDependencies": {
+    "@types/cordova": "^0.0.34",
+    "@types/node": "^15.6.1",
+    "typescript": "^4.7.4"
+  }
+}

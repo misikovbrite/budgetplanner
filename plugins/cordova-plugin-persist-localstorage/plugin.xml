@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-persist-localstorage" version="0.2.3">
+    <name>Persist Localstorage</name>
+    <description>A Cordova Plugin to persist the iOS localstorage</description>
+    <license>MIT</license>
+    <keywords>cordova,localstorage,save,persist</keywords>
+    <repo>https://github.com/alexcondrea/cordova-plugin-persist-localstorage.git</repo>
+
+    <js-module src="www/persistlocal.js" name="persistlocal">
+        <clobbers target="PersistLocalstorage" />
+    </js-module>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="PersistLocalstorage">
+                <param name="ios-package" value="CDVPersistLocal"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVPersistLocal.h" />
+        <source-file src="src/ios/CDVPersistLocal.m" />
+    </platform>
+</plugin>

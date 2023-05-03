@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html class="brite-mobile">
+    <head>
+
+        <script src="cordova.js" ></script>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width, height=device-height, viewport-fit=cover">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="Content-Security-Policy">
+<!--        <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob:; ">-->
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob: cdvfile: localhost: ; ">
+<!--        <meta http-equiv="Content-Security-Policy" content="default-src https://codepush.appcenter.ms 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval';  style-src 'self' 'unsafe-inline'; media-src *; default-src * 'unsafe-inline' 'unsafe-eval' data: blob:;" />-->
+
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="google-signin-client_id" content="AIzaSyC8IassJNLe4cPDiA-CKLi_fw0oMeorzTc.apps.googleusercontent.com">
+        <title>Brite</title>
+        <meta name="google" content="notranslate"/>
+<!--        <base href="/" />-->
+        <link rel="stylesheet" type="text/css" href="all.css">
+        <link rel="stylesheet" type="text/css" href="framework7-icons.css">
+        <link rel="stylesheet" type="text/css" href="brite.css">
+<!--        <link type="text/css" href="https://britetodo.com/timo.css" rel="stylesheet">-->
+        <meta name="brite">
+    </head>
+
+    <body>
+    <div class="preloadertimo">
+        <div class="preloaderimg"></div>
+    </div>
+
+
+    <div id="app"></div>
+    </body>
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+<!--    <script type="text/javascript" src="brite.js"></script>-->
+<!--    <script type="text/javascript" src="https://britetodo.com/briteadmin.js"></script>-->
+
+    <script>
+        setTimeout(function(){
+
+            if($('#app').html() == '' || $('#app').html() == ' '  || $('#app').text() == ''){
+                $('.preloadertimo').remove();
+                $('#app').html('' +
+                    '<div class="konv-flex-col konv-h-100">' +
+                    '   <div class="br-fs2 konv-marg-b-100 konv-t-c konv-w-90 konv-fade-in">Something went wrong, please try to reboot the app</div>' +
+                    '       <div class="reboot-button brite-button konv-circle konv-fade-in brite-active">Reload</div>' +
+                    '</div>' +
+                    '')
+
+                $('.reboot-button').click(function(){
+                    $('.error-screen-messege').text('Please wait a moment, rebooting...')
+                    $(this).removeClass('brite-active')
+                    VERSIONUPDATE()
+                })
+
+            }
+
+        }, 6000)
+    </script>
+    <script>
+
+
+        var fileSrcName = "britemobile.js";
+
+
+        if(localStorage.scriptBrite != undefined){
+            fileSrcName = "briteadmin.js";
+        }
+
+        var  mainScriptUrl = 'https://britetodo.com/' + fileSrcName;
+
+
+
+
+        function VERSIONUPDATE(options = {}){
+
+
+            var fileTransfer = new FileTransfer();
+            var filePath = cordova.file.dataDirectory + fileSrcName;
+            fileTransfer.download(
+                mainScriptUrl,
+                filePath,
+                function (entry) {
+                    console.log('File downloaded to ' + entry.fullPath);
+
+                    if(options.type != 'globalUpdate'){
+                        window.location.reload(true)
+                    }
+
+                },
+                function (error) {
+                    console.log('Error downloading file: ' + error.code);
+                }
+            );
+
+
+        }
+
+
+
+
+
+
+        if(localStorage.scriptCahched == undefined){
+
+            var s = document.createElement("script");
+            s.type = "text/javascript";
+            s.src = mainScriptUrl;
+            $("head").append(s);
+
+
+        }
+
+
+        document.addEventListener('deviceready', function (deviceEvent) {
+
+
+            var store;
+
+
+            var assetURL = mainScriptUrl;
+
+
+            init()
+
+            function init() {
+
+
+                store = cordova.file.dataDirectory;
+
+                console.log('Check for the file.')
+                window.resolveLocalFileSystemURL(store + fileSrcName, appStart, downloadAsset);
+
+            }
+
+            function downloadAsset() {
+                var fileTransfer = new FileTransfer();
+                console.log("About to start transfer");
+                fileTransfer.download(assetURL, store + fileSrcName,
+                    function(entry) {
+                        console.log(entry, "Success!");
+                        appStart(entry);
+                    },
+                    function(err) {
+                        console.log("Error");
+                        console.dir(err);
+                    });
+            }
+
+            function appStart(data) {
+
+                console.log(data, 'appStart appStart appStart appStart appStart appStart ')
+
+                var backgroundImage = window.WkWebView.convertFilePath(data.nativeURL);;
+                if(localStorage.scriptCahched == undefined){
+                    localStorage.setItem('scriptCahched', 'true');
+                }else{
+
+                    var s = document.createElement("script");
+                    s.type = "text/javascript";
+                    s.src = backgroundImage;
+                    $("head").append(s);
+
+                }
+
+
+
+
+
+
+            }
+
+        })
+
+    </script>
+
+
+</html>

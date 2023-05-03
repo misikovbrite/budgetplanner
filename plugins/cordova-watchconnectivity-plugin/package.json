@@ -1,0 +1,60 @@
+{
+  "_from": "cordova-watchconnectivity-plugin",
+  "_id": "cordova-watchconnectivity-plugin@1.0.1",
+  "_inBundle": false,
+  "_integrity": "sha512-tuPceUpoO03a2TMxQcV1zPuwU0M0rSE2nsMwbhxE9Mcgm5W/YrQEJ/ce2L4FzUrjyGV3lF79DBv3uOTvsSludw==",
+  "_location": "/cordova-watchconnectivity-plugin",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-watchconnectivity-plugin",
+    "name": "cordova-watchconnectivity-plugin",
+    "escapedName": "cordova-watchconnectivity-plugin",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-watchconnectivity-plugin/-/cordova-watchconnectivity-plugin-1.0.1.tgz",
+  "_shasum": "af035fc422f8bb08cda01c97157d7230d8c49c9a",
+  "_spec": "cordova-watchconnectivity-plugin",
+  "_where": "/Users/misikovm/PhpstormProjects/untitled12",
+  "author": {
+    "name": "Joshua Riley"
+  },
+  "bugs": {
+    "url": "https://github.com/JoshuaRileyDev/cordova-watchconnectivity-plugin/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "cordova-watchconnectivity-plugin",
+  "directories": {
+    "lib": "src/ios"
+  },
+  "homepage": "https://github.com/JoshuaRileyDev/cordova-watchconnectivity-plugin#readme",
+  "keywords": [
+    "cordova",
+    "watchos",
+    "apple",
+    "ionic",
+    "watchconnectivity"
+  ],
+  "license": "MIT",
+  "main": "www/cordova-watchconnectivity-plugin.js",
+  "name": "cordova-watchconnectivity-plugin",
+  "platforms": [
+    "ios"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshuaRileyDev/cordova-watchconnectivity-plugin.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no tests to run\" && exit 1"
+  },
+  "version": "1.0.1"
+}

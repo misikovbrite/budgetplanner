@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>912018847835-9j3jlgb4vfgbfmi81jhj7i6cru8u1njg.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.912018847835-9j3jlgb4vfgbfmi81jhj7i6cru8u1njg</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDtibXLte4-bIMlQmDf5CrJDpBz_btioDA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>912018847835</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>io.konveier.timo</string>
+	<key>PROJECT_ID</key>
+	<string>brite-7b50c</string>
+	<key>STORAGE_BUCKET</key>
+	<string>brite-7b50c.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<false></false>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:912018847835:ios:1c8be484aec46b84b5a77e</string>
+</dict>
+</plist>

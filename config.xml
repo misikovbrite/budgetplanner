@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.konveier.timo" version="19.0.9" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Brite</name>
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="UIWebViewBounce" value="true" />
+<!--    <preference name="SplashScreen" value="100" />-->
+
+<!--    <preference name="ShowSplashScreen" value="true"/>-->
+<!--    <preference name="SplashScreen" value="screen"/>-->
+<!--    <preference name="SplashShowOnlyFirstTime" value="false"/>-->
+<!--    <preference name="ShowSplashScreenSpinner" value="false"/>`-->
+
+
+<!--    <preference name="SplashScreenDelay" value="1000"/>-->
+<!--    <preference name="AutoHideSplashScreen" value="true"/>-->
+<!--    <preference name="FadeSplashScreen" value="true"/>-->
+<!--    <preference name="FadeSplashScreenDuration" value="1000"/>-->
+<!--    <preference name="deployment-target" value="9.0.0" />-->
+
+
+
+    <preference name="SplashScreenDelay" value="1000" />
+    <preference name="IOS_UNIFORM_TYPE_IDENTIFIER" value="public.image" />
+
+    <preference name="AutoHideSplashScreen" value="true"/>
+    <preference name="ShowSplashScreenSpinner" value="false"/>
+    <!--    <preference name="SplashShowOnlyFirstTime" value="false"/>-->
+        <preference name="FadeSplashScreen" value="true"/>
+        <preference name="FadeSplashScreenDuration" value="500"/>
+
+    <preference name="SuppressesLongPressGesture" value="true" />
+
+    <preference name="ServiceWorker" value="sw.js" />
+
+    <preference name="BackgroundColor" value="0x000000ff"/>
+
+    <preference name="KeyboardStyle" value="dark" />
+    <preference name="KeyboardResizeMode" value="body" />
+
+
+    <preference name="KeyboardResize" value="false" />
+    <preference name="StatusBarStyle" value="blackopaque" />
+
+    <preference name="iosPersistentFileLocation" value="Library" />
+    <preference name="InAppBrowserOverrideUserAgent" value="Mozilla/5.0 Google" />
+    <preference name="UseSwiftLanguageVersion" value="5" />
+
+    <preference name="iosExtraFilesystems" value="library,library-nosync,documents,documents-nosync,cache,bundle,root" />
+
+<!--    <preference name="Orientation" value="portrait" />-->
+    <preference name="AllowInlineMediaPlayback" value="true"/>
+    <preference name="EnableWebGL" value="false" />
+    <preference name="WindowSize" value="1200x1000"/>
+    <preference name="KeyboardDisplayRequiresUserAction" value="false"/>
+    <preference name="HideKeyboardFormAccessoryBar" value="true"/>
+    <description>
+        Список задач, трекер привычек, календарь и заметки
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Konveier
+    </author>
+    <edit-config target="NSCalendarsUsageDescription" file="*-Info.plist" mode="merge">
+        <string>Необходим доступ к календарю для отображения событий</string>
+    </edit-config>
+    <edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
+        <string>Необходим доступ к геолакационным данным, для отображения данных о погоде, создания напоминаний, сохранения позиции при добавлении данных</string>
+    </edit-config>
+    <edit-config target="NSLocationAlwaysAndWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
+        <string>Необходим доступ к геолакационным данным, для отображения данных о погоде, создания напоминаний, сохранения позиции при добавлении данных</string>
+    </edit-config>
+    <edit-config target="NSLocationAlwaysUsageDescrcordova-plugin-statusbaription" file="*-Info.plist" mode="merge">
+        <string>Необходим доступ к геолакационным данным, для отображения данных о погоде, создания напоминаний, сохранения позиции при добавлении данных</string>
+    </edit-config>
+    <edit-config target="NSLocationAlwaysUsageDescription" file="*-Info.plist" mode="merge">
+        <string>Необходим доступ к геолакационным данным, для отображения данных о погоде, создания напоминаний, сохранения позиции при добавлении данных</string>
+    </edit-config>
+
+    <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
+        <string>Необходим доступ к камере, для добавления изображений в задачи, работы с текстовым редактора, ведения дневников и отправки в чате</string>
+    </edit-config>
+
+    <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
+        <string>Необходим доступ к медиатеке, для добавления изображений в задачи, работы с текстовым редактора, ведения дневников и отправки в чате</string>
+    </edit-config>
+
+    <edit-config file="*-Info.plist" mode="overwrite" target="LSApplicationCategoryType">
+        <string>public.app-category.lifestyle</string>
+    </edit-config>
+
+<!--    <edit-config file="*-Info.plist" mode="overwrite" target="LSApplicationCategoryType">-->
+<!--        <string>com.apple.security.app-sandbox</string>-->
+<!--    </edit-config>-->
+
+    <!--    <edit-config target="HEALTH_READ_PERMISSION" file="*-Info.plist" mode="merge">-->
+<!--        <string>Необходим доступ для отображения данных о здоровье пользователя</string>-->
+<!--    </edit-config>-->
+<!--    <edit-config target="NSHealthShareUsageDescription" file="*-Info.plist" mode="merge">-->
+<!--        <string>Необходим доступ к данным о шагах, калориях, тренировках, сне и питании для отображения в виджетах главного экрана Brite, а так же во внутренних разделах</string>-->
+<!--    </edit-config>-->
+<!--    <edit-config target="NSHealthUpdateUsageDescription" file="*-Info.plist" mode="merge">-->
+<!--        <string>Необходим доступ к записи данных о здоровье, для возможности записи результатов тренировок, ведения дневника питания и отслеживания затраченных каллорий через виджет "Фитнесс"</string>-->
+<!--    </edit-config>-->
+    <config-file overwrite="true" parent="NSMicrophoneUsageDescription" platform="ios" target="*-Info.plist">
+        <string>Необходимо доступ к микрофону для</string>
+    </config-file>
+    <edit-config file="*-Info.plist" mode="merge" target="UIViewControllerBasedStatusBarAppearance">
+        <true />
+    </edit-config>
+<!--    <config-file parent="UIUserInterfaceStyle" platform="ios" target="*-Info.plist">-->
+<!--        <string>Light</string>-->
+<!--    </config-file>-->
+    <edit-config target="NSUserTrackingUsageDescription" file="*-Info.plist" mode="merge">
+        <string>Ваши данные будут использоваться, для предоставления персонализированного опыта использования и для улучшения нашего продукта и сервисов</string>
+    </edit-config>
+    <edit-config target="NSUserTrackingUsageDescription" file="*-Info.plist" mode="merge">
+        <string>Ваши данные будут использоваться, для предоставления персонализированного опыта использования и для улучшения нашего продукта и сервисов</string>
+    </edit-config>
+
+    <edit-config file="*-Info.plist" mode="merge" target="UIViewControllerBasedStatusBarAppearance">
+        <true />
+    </edit-config>
+
+    <content src="index.html" />
+    <icon src="res/icon/ios/icon-1024.png" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+
+    <access origin="*" />
+
+    <allow-navigation href="*"/>
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+
+    <access origin="cdvfile://*" />
+    <access origin="sentry.io" />
+    <access origin="https://maps.googleapis.com" />
+    <access origin="https://*.konverbot.com" />
+    <access origin="https://*.knvbt.com/" />
+    <access origin="https://knvbt.com/" />
+    <access origin="https://*.googleapis.com" />
+    <access origin="https://*.cloudflare.com/" />
+
+
+    <allow-navigation href="https://*youtube.com/*"/>
+    <access origin="https://*.youtube-nocookie.com" />
+    <access origin="https://*.youtube.com" />
+    <access origin="https://*.ytimg.com" />
+    <access origin="https://*.gstatic.com" />
+    <access origin="https://*.googlevideo.com" />
+    <access origin="https://*.google.com" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+
+    <access origin="https://*.youtube-nocookie.com" />
+    <access origin="https://*.youtube.com" />
+    <access origin="https://*.ytimg.com" />
+    <access origin="https://*.gstatic.com" />
+    <access origin="https://*.googlevideo.com" />
+    <access origin="https://*.google.com" />
+    <access origin="https://britetodo.com/*" />
+    <access origin="https://codepush.appcenter.ms" />
+    <access origin="https://codepush.blob.core.windows.net" />
+    <access origin="https://codepushupdates.azureedge.net" />
+
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+
+    <platform name="osx">
+
+        <feature name="InAppBrowser">
+            <param name="osx-package" value="CDVInAppBrowser" />
+        </feature>
+
+    </platform>
+
+    <platform name="ios">
+
+<!--        <preference name="CodePushPublicKey" value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5iFBPBwe52zSlXlccP3S0KbvastjcReWZTW3kKwOtj7SFSqjZTLme6bRSoqq/JuV13XAwQfZZw3yWvaksF1BLYtQGeujuGAMBr25d2dxtE0vfLjp0kjSlnYOyNT1Cp0i4tOnxtrwui+qPJY/ZiA1EEtzox7HCIje5WbjBksbN/kBEtXLa5aH7Y1FDxD2Er7vCcCa8q1Ce3/WoRpBoq77wce5LzSvddFd0v32ort6HaQDZm+Eyy2W2r5oMVXQa7uiSdT8vZeIZGy6hgctrwBvVy0JxXGMkedqRTUJg8V2V8rGDv/JTpajmpfPX8re/4lxpz+sRAqCYikBq41yXA4F2QIDAQAB" />-->
+
+<!--        <preference name="CodePushDeploymentKey" value="2qxyhfve2tjh6Unb_4HuT0dX5f1fEp_D0k9mt" />-->
+
+
+        <preference name="scheme" value="app" />
+
+        <preference name="hostname" value="localhost" />
+
+
+
+            <resource-file src="GoogleService-Info.plist" />
+        <edit-config target="CFBundleLocalizations" file="*-Info.plist" mode="overwrite">
+            <array>
+                <string>en</string>
+                <string>ru</string>
+            </array>
+        </edit-config>
+
+
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <preference name="WKWebViewOnly" value="true" />
+        <feature name="CDVWKWebViewEngine">
+            <param name="ios-package" value="CDVWKWebViewEngine" />
+        </feature>
+        <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
+        <icon height="180" src="res/icon/ios/icon-60@3x.png" width="180" />
+        <icon height="60" src="res/icon/ios/icon-60.png" width="60" />
+        <icon height="120" src="res/icon/ios/icon-60@2x.png" width="120" />
+        <icon height="76" src="res/icon/ios/icon-76.png" width="76" />
+        <icon height="152" src="res/icon/ios/icon-76@2x.png" width="152" />
+        <icon height="40" src="res/icon/ios/icon-small-40.png" width="40" />
+        <icon height="80" src="res/icon/ios/icon-small-40@2x.png" width="80" />
+        <icon height="57" src="res/icon/ios/icon.png" width="57" />
+        <icon height="114" src="res/icon/ios/icon@2x.png" width="114" />
+        <icon height="72" src="res/icon/ios/icon-72.png" width="72" />
+        <icon height="144" src="res/icon/ios/icon-72@2x.png" width="144" />
+        <icon height="167" src="res/icon/ios/icon-167.png" width="167" />
+        <icon height="29" src="res/icon/ios/icon-small.png" width="29" />
+        <icon height="58" src="res/icon/ios/icon-small@2x.png" width="58" />
+        <icon height="87" src="res/icon/ios/icon-small@3x.png" width="87" />
+        <icon height="50" src="res/icon/ios/icon-small-50.png" width="50" />
+        <icon height="100" src="res/icon/ios/icon-small-50@2x.png" width="100" />
+        <icon height="167" src="res/icon/ios/icon-83.5@2x.png" width="167" />
+        <icon height="1024" src="res/icon/ios/icon-1024.png" width="1024"  />
+
+
+        <splash src="res/screen/ios/Default@2x~iphone~anyany.png" />
+        <splash src="res/screen/ios/Default@2x~iphone~comany.png" />
+        <splash src="res/screen/ios/Default@2x~iphone~comcom.png" />
+        <splash src="res/screen/ios/Default@3x~iphone~anyany.png" />
+        <splash src="res/screen/ios/Default@3x~iphone~anycom.png" />
+        <splash src="res/screen/ios/Default@3x~iphone~comany.png" />
+        <splash src="res/screen/ios/Default@2x~ipad~anyany.png" />
+        <splash src="res/screen/ios/Default@2x~ipad~comany.png" />
+
+
+        <splash src="res/screen/iosscreensdark/Default@2x~iphone~anyany~dark.png" />
+        <splash src="res/screen/iosscreensdark/Default@2x~iphone~comany~dark.png" />
+        <splash src="res/screen/iosscreensdark/Default@2x~iphone~comcom~dark.png" />
+        <splash src="res/screen/iosscreensdark/Default@3x~iphone~anyany~dark.png" />
+        <splash src="res/screen/iosscreensdark/Default@3x~iphone~anycom~dark.png" />
+        <splash src="res/screen/iosscreensdark/Default@3x~iphone~comany~dark.png" />
+        <splash src="res/screen/iosscreensdark/Default@2x~ipad~anyany~dark.png" />
+        <splash src="res/screen/iosscreensdark/Default@2x~ipad~comany~dark.png" />
+
+        <splash src="res/screen/iosscreenswhite/Default@2x~iphone~anyany~light.png" />
+        <splash src="res/screen/iosscreenswhite/Default@2x~iphone~comany~light.png" />
+        <splash src="res/screen/iosscreenswhite/Default@2x~iphone~comcom~light.png" />
+        <splash src="res/screen/iosscreenswhite/Default@3x~iphone~anyany~light.png" />
+        <splash src="res/screen/iosscreenswhite/Default@3x~iphone~anycom~light.png" />
+        <splash src="res/screen/iosscreenswhite/Default@3x~iphone~comany~light.png" />
+        <splash src="res/screen/iosscreenswhite/Default@2x~ipad~anyany~light.png" />
+        <splash src="res/screen/iosscreenswhite/Default@2x~ipad~comany~light.png" />
+
+
+
+    </platform>
+</widget>

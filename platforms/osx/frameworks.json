@@ -1,0 +1,5 @@
+{
+    "Quartz.framework": 1,
+    "AppKit.framework": 1,
+    "StoreKit.framework": 1
+}

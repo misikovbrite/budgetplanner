@@ -1,0 +1,105 @@
+Keychain storage Plugin for Apache Cordova
+=====================================
+
+Plugin helps to store data across app updates, install/uninstall processes on the device
+On iOS save in keychain
+On Android save in hidden file on external storage, stored values are encrypted
+
+### Install
+`cordova plugin add cordova-plugin-keychain-storage`
+
+The plugin's JavaScript functions are called after creating the plugin object thus:
+
+        var kc = new Keychain();
+        kc.getForKey(win, fail, "some_key", "some_servicename");
+### iCloud keychain enabled
+
+iCloud keychain synchonizing is enabled, so the keychain will be mirrored across all devices *if* the user is signed in to iCloud (Settings > iCloud) and has iCloud keychain turned on (Settings > iCloud > Keychain)
+
+### Android API 29+ support
+Add android:requestLegacyExternalStorage="true" to <application tag in manifest
+
+<edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
+    <application android:requestLegacyExternalStorage="true" />
+</edit-config>
+
+And permissions:
+
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+### Usage
+        
+**Important:**
+
+```js
+If you are saving a JSON string value in setForKey, for example after applying JSON.stringify on an object, you must escape the characters in that string, if not you cannot retrieve it using getForKey.        
+
+var obj = { foo: 'bar' };
+var value = JSON.stringify(obj);
+value = value 
+      .replace(/[\\]/g, '\\\\')
+      .replace(/[\"]/g, '\\\"')
+      .replace(/[\/]/g, '\\/')
+      .replace(/[\b]/g, '\\b')
+      .replace(/[\f]/g, '\\f')
+      .replace(/[\n]/g, '\\n')
+      .replace(/[\r]/g, '\\r')
+      .replace(/[\t]/g, '\\t');
+```
+
+              
+See the **example** folder for example usage.
+
+```js
+// Get a reference to the plugin first
+// Use optional string parameter 'encryptionRequired' to specify if Android keys should be stored encrypted 
+// (no affect on iOS)
+// Keychain() or Keychain('true') will use encryption to store keys
+// Keychain('false') will store unencrypted keys
+// If Android screen lock is not configured then an attempt to use Keychain with encrypted keys will fail with error:
+// "failed: Android keystore must be in initialized and unlocked state if encryption is required"
+var kc = new Keychain();
+
+/*
+ Retrieves a value for a key and servicename.
+ 
+ @param successCallback returns the value as the argument to the callback when successful
+ @param failureCallback returns the error string as the argument to the callback, for a failure
+ @param key the key to retrieve
+ @param servicename the servicename to use
+ */
+kc.getForKey(successCallback, failureCallback, 'key', 'servicename');
+
+/*
+ Sets a value for a key and servicename.
+ 
+ @param successCallback returns when successful
+ @param failureCallback returns the error string as the argument to the callback, for a failure
+ @param key the key to set
+ @param servicename the servicename to use
+ @param value the value to set
+ */
+kc.setForKey(successCallback, failureCallback, 'key', 'servicename', 'value');
+
+/*
+ Removes a value for a key and servicename.
+ 
+ @param successCallback returns when successful
+ @param failureCallback returns the error string as the argument to the callback
+ @param key the key to remove
+ @param servicename the servicename to use
+ */
+kc.removeForKey(successCallback, failureCallback, 'key', 'servicename');
+```
+
+based on plugins by David Williams (ADI Health) extending work by Shazron Abdullah (Copyright 2012) to include support for Android Keystore.
+Requires Android API level 18 (4.3) for Keystore support
+
+[Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0.html) except for the SFHFKeychainUtils code that is under **src/ios/SFHFKeychainUtils**
+
+Follows the [Cordova Plugin spec](http://cordova.apache.org/docs/en/3.0.0/plugin_ref_spec.md), so that it works with [Plugman](https://github.com/apache/cordova-plugman), or you can install it manually below.
+
+Manually importing the plugin is not supported anymore, please use [Plugman](http://npmjs.org/plugman)     or the [Cordova CLI tool](http://npmjs.org/cordova)
+
+The "Keychain" object definition is installed globally.

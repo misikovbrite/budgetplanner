@@ -1,0 +1,15 @@
+{
+  "minifyEnabled": "Always",
+  "combineJavascripts": {
+    "enabled" : false
+  },
+  "files": {
+    "paths": ["plugins"],
+    "recursive": true,
+    "javascriptStrategy": "scanDirectory"
+  },
+  "terserOptions": {
+  },
+  "cleanCSSOptions": {
+  }
+}

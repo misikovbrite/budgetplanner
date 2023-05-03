@@ -1,0 +1,14 @@
+{
+  "name": "WidgetRefresh",
+  "version": "0.0.1",
+  "description": "Plugin initialise refresh Widget Data",
+  "cordova": {
+    "id": "zalarudo-widget-refresh",
+    "platforms": []
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Zalarudo",
+  "license": "MIT"
+}

@@ -1,0 +1,55 @@
+{
+  "_from": "cordova-plugin-persist-localstorage",
+  "_id": "cordova-plugin-persist-localstorage@1.2.0",
+  "_inBundle": false,
+  "_integrity": "sha512-MrycqiXDfsTIeN4t0qw9dtobW6UI8k7NgeSaJ/PXn0p48TnRjk1ISk3lT7FDoZkyq3r60REk/+RsA3kjfJn0Ww==",
+  "_location": "/cordova-plugin-persist-localstorage",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-persist-localstorage",
+    "name": "cordova-plugin-persist-localstorage",
+    "escapedName": "cordova-plugin-persist-localstorage",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-persist-localstorage/-/cordova-plugin-persist-localstorage-1.2.0.tgz",
+  "_shasum": "1faf94f99fe4ba25316ce9930ade14b977db9665",
+  "_spec": "cordova-plugin-persist-localstorage",
+  "_where": "/Users/misikovm/PhpstormProjects/untitled12",
+  "author": {
+    "name": "Alexandru Condrea"
+  },
+  "bugs": {
+    "url": "https://github.com/alexcondrea/cordova-plugin-persist-localstorage/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-persist-localstorage",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "deprecated": false,
+  "description": "A Cordova plugin to persist the localstorage. Sometimes the localstorage in webkit gets wiped and the user looses everything stored there",
+  "homepage": "https://github.com/alexcondrea/cordova-plugin-persist-localstorage#readme",
+  "keywords": [
+    "cordova",
+    "plugin",
+    "persist",
+    "localstorage"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-persist-localstorage",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexcondrea/cordova-plugin-persist-localstorage.git"
+  },
+  "version": "1.2.0"
+}

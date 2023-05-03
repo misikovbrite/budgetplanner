@@ -1,0 +1,18 @@
+{
+  "config_ios" : {
+    "NSCalendarsUsageDescription" : "Calendar access required to display events",
+    "NSLocationWhenInUseUsageDescription" : "Access to geolocation data is required to display weather forecast, create reminders, save position when adding data",
+    "NSLocationAlwaysAndWhenInUseUsageDescription" : "Access to geolocation data is required to display weather forecast, create reminders, save position when adding data",
+    "NSLocationAlwaysUsageDescrcordova-plugin-statusbaription" : "Access to geolocation data is required to display weather forecast, create reminders, save position when adding data",
+    "NSLocationAlwaysUsageDescription" : "Access to geolocation data is required to display weather forecast, create reminders, save position when adding data",
+    "NSCameraUsageDescription" : "Need access to the camera to add images to tasks, work with a text editor, keep diaries and send in chat",
+    "NSPhotoLibraryUsageDescription" : "Need access to the library to add images to tasks, work with a text editor, keep diaries and send in chat",
+    "NSMicrophoneUsageDescription" : "Requires microphone access to add audio notes",
+    "NSUserTrackingUsageDescription" : "Your data will be used to deliver a personalized experience and to improve our product and services.",
+    "CFBundleDisplayName": "Brite",
+    "CFBundleName": "Brite"
+  },
+  "config_android" : {
+    "app_name": "Brite"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "appId": "io.konveier.timo",
+  "appName": "Brite",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "cordova": {
+    "preferences": {
+      "DisallowOverscroll": "true",
+      "UIWebViewBounce": "true",
+      "SplashScreenDelay": "1000",
+      "IOS_UNIFORM_TYPE_IDENTIFIER": "public.image",
+      "AutoHideSplashScreen": "true",
+      "ShowSplashScreenSpinner": "false",
+      "FadeSplashScreen": "true",
+      "FadeSplashScreenDuration": "500",
+      "SuppressesLongPressGesture": "true",
+      "ServiceWorker": "sw.js",
+      "BackgroundColor": "0x000000ff",
+      "KeyboardStyle": "dark",
+      "KeyboardResizeMode": "body",
+      "KeyboardResize": "false",
+      "StatusBarStyle": "blackopaque",
+      "iosPersistentFileLocation": "Library",
+      "InAppBrowserOverrideUserAgent": "Mozilla/5.0 Google",
+      "UseSwiftLanguageVersion": "5",
+      "iosExtraFilesystemsвы": "library,library-nosync,documents,documents-nosync,cache,bundle,root",
+      "AllowInlineMediaPlayback": "true",
+      "EnableWebGL": "false",
+      "WindowSize": "1200x1000",
+      "KeyboardDisplayRequiresUserAction": "false",
+      "HideKeyboardFormAccessoryBar": "true"
+    }
+  }
+}

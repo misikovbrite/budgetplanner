@@ -1,0 +1,146 @@
+{
+  "name": "helloworld",
+  "displayName": "HelloCordova",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "capacitor"
+  },
+  "homepage": "./",
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@bazumax/appcenter-cli": "^2.10.8",
+    "@capacitor/android": "^4.7.3",
+    "@capacitor/cli": "^4.7.3",
+    "@capacitor/core": "^4.7.3",
+    "@capacitor/ios": "^4.7.3",
+    "@capacitor/keyboard": "^4.1.1",
+    "@capacitor/local-notifications": "^4.1.5",
+    "cordova": "^10.0.0",
+    "cordova-file-cache": "^1.2.2",
+    "cordova-ios": "^5.1.1",
+    "cordova-ios-plugin-userdefaults": "^1.0.0",
+    "cordova-launch-review": "^4.0.1",
+    "cordova-osx": "^5.0.0",
+    "cordova-plugin-3dtouch": "git+https://github.com/EddyVerbruggen/cordova-plugin-3dtouch.git",
+    "cordova-plugin-add-swift-support": "^2.0.2",
+    "cordova-plugin-app-launcher": "^0.4.0",
+    "cordova-plugin-app-review": "^2.0.3",
+    "cordova-plugin-background-mode": "^0.7.3",
+    "cordova-plugin-browser": "^2.0.0",
+    "cordova-plugin-calendar": "^5.1.5",
+    "cordova-plugin-camera": "^5.0.1",
+    "cordova-plugin-customurlscheme": "^5.0.2",
+    "cordova-plugin-device": "^2.0.3",
+    "cordova-plugin-fastclick": "^1.0.0",
+    "cordova-plugin-file": "^6.0.2",
+    "cordova-plugin-file-transfer": "git+https://github.com/dpa99c/cordova-plugin-file-transfer.git",
+    "cordova-plugin-geolocation": "^4.0.2",
+    "cordova-plugin-globalization": "^1.11.0",
+    "cordova-plugin-idfa": "^2.0.0",
+    "cordova-plugin-inappbrowser": "^5.0.0",
+    "cordova-plugin-inapppurchase": "^1.2.0",
+    "cordova-plugin-insomnia": "git+https://github.com/EddyVerbruggen/Insomnia-PhoneGap-Plugin.git",
+    "cordova-plugin-ionic-keyboard": "2.2.0",
+    "cordova-plugin-ios-keychain": "github:ionic-team/cordova-plugin-ios-keychain",
+    "cordova-plugin-keychain-storage": "^1.1.6",
+    "cordova-plugin-localization-strings": "^3.2.1",
+    "cordova-plugin-media": "^6.1.0",
+    "cordova-plugin-minify": "^1.0.1",
+    "cordova-plugin-network-information": "^3.0.0",
+    "cordova-plugin-persist-localstorage": "^1.2.0",
+    "cordova-plugin-purchase": "^11.0.0",
+    "cordova-plugin-screen-orientation": "^3.0.2",
+    "cordova-plugin-sign-in-with-apple": "^0.1.2",
+    "cordova-plugin-splashscreen": "^5.0.0",
+    "cordova-plugin-statusbar": "git+https://github.com/codextde/cordova-plugin-statusbar-color-fix.git",
+    "cordova-plugin-taptic-engine": "^2.2.0",
+    "cordova-plugin-theme-detection": "^1.3.0",
+    "cordova-plugin-webviewcolor": "^2.2.0",
+    "cordova-plugin-x-socialsharing": "^6.0.3",
+    "cordova-promise-fs": "^1.2.5",
+    "cordova-silent-mode-extended": "git+https://github.com/gsiuniak/cordova-silent-mode.git",
+    "cordova-support-android-plugin": "^1.0.2",
+    "cordova-support-google-services": "^1.3.2",
+    "cordova-watchconnectivity-plugin": "^1.0.1",
+    "cordova.plugins.diagnostic": "^6.1.0",
+    "es6-promise-plugin": "git+https://github.com/vstirbu/PromisesPlugin.git",
+    "jetifier": "^2.0.0",
+    "phonegap-plugin-multidex": "^1.0.0",
+    "WidgetRefresh": "file:../../Downloads/WidgetRefresh"
+  },
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.0"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-screen-orientation": {},
+      "phonegap-plugin-push": {},
+      "cordova-plugin-3dtouch": {},
+      "cordova-plugin-sign-in-with-apple": {},
+      "cordova-plugin-app-launcher": {},
+      "cordova-plugin-calendar": {
+        "CALENDAR_USAGE_DESCRIPTION": " ",
+        "CONTACTS_USAGE_DESCRIPTION": " "
+      },
+      "cordova-plugin-ionic-keyboard": {},
+      "cordova-support-google-services": {},
+      "cordova-plugin-camera": {},
+      "cordova-plugin-x-socialsharing": {
+        "PHOTO_LIBRARY_ADD_USAGE_DESCRIPTION": "This app requires photo library access to function properly.",
+        "PHOTO_LIBRARY_USAGE_DESCRIPTION": "This app requires photo library access to function properly."
+      },
+      "cordova-plugin-inapppurchase": {},
+      "cordova-plugin-idfa": {},
+      "cordova-plugin-browser": {
+        "ANDROIDX_BROWSER_VERSION": "1.0.+"
+      },
+      "cordova-plugin-localization-strings": {
+        "TRANSLATION_PATH": "translations/app/"
+      },
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-theme-detection": {},
+      "cordova-plugin-app-review": {},
+      "cordova-plugin-network-information": {},
+      "cordova-plugin-geolocation": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-file-transfer": {},
+      "cordova-plugin-googleplus": {
+        "REVERSED_CLIENT_ID": "com.googleusercontent.apps.912018847835-9j3jlgb4vfgbfmi81jhj7i6cru8u1njg",
+        "WEB_APPLICATION_CLIENT_ID": "800569388759-ldg5n86des34oc5i6ck2ngaj4nkdnou9.apps.googleusercontent.com"
+      },
+      "cordova.plugins.diagnostic": {},
+      "cordova-plugin-customurlscheme": {
+        "URL_SCHEME": "briteapp"
+      },
+      "cordova-plugin-local-notification": {},
+      "cordova-watchconnectivity-plugin": {},
+      "cordova-ios-plugin-userdefaults": {},
+      "cordova-plugin-insomnia": {},
+      "cordova-plugin-globalization": {},
+      "cordova-plugin-background-mode": {},
+      "cordova-plugin-inappbrowser": {},
+      "cordova-launch-review": {},
+      "cordova-plugin-purchase": {},
+      "cordova-plugin-webviewcolor": {},
+      "cordova-plugin-persist-localstorage": {},
+      "cordova-plugin-media": {
+        "KEEP_AVAUDIOSESSION_ALWAYS_ACTIVE": "NO"
+      },
+      "zalarudo-widget-refresh": {},
+      "cordova-plugin-smartlook": {},
+      "cordova-plugin-purchases": {},
+      "cordova-plugin-minify": {},
+      "cordova-plugin-keychain-storage": {}
+    },
+    "platforms": []
+  }
+}

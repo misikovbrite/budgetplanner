@@ -1,0 +1,26 @@
+13127c13127
+<                                 //console.log(000000000, 'Previous element dont have dephth and  next element have depth')
+---
+>                                 console.log(000000000, 'Previous element dont have dephth and  next element have depth')
+17850c17850
+<                                     //delete calculateDuration;
+---
+>                                     delete calculateDuration;
+26407c26407
+<                         UUPDATE('tm_stats') //= JSON.stringify({'type': title, 'value' : value, 'date' : briteGetTimeIso()});
+---
+>                         UUPDATE('tm_stats') = JSON.stringify({'type': title, 'value' : value, 'date' : briteGetTimeIso()});
+63768,63769c63768,63769
+<                             // <!--    state : '[STATE]',-->
+<                             // <!--    nonce : '[NONCE]',-->
+---
+>                             <!--    state : '[STATE]',-->
+>                             <!--    nonce : '[NONCE]',-->
+76360c76360
+<             sendPushNotification(userId, title, messege, img = '', eval2 = 'console.log("eval")') {
+---
+>             sendPushNotification(userId, title, messege, img = '', eval = 'console.log("eval")') {
+77031c77031
+<                     UUPDATE('tm_stats')// = JSON.stringify({'type': title, 'value' : value, 'date' : briteGetTimeIso()});
+---
+>                     UUPDATE('tm_stats') = JSON.stringify({'type': title, 'value' : value, 'date' : briteGetTimeIso()});

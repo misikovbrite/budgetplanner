@@ -20,7 +20,6 @@
 <html class="brite-mobile">
     <head>
 
-        <script src="cordova.js" ></script>
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -173,7 +172,7 @@
 
                 console.log(data, 'appStart appStart appStart appStart appStart appStart ')
 
-                var backgroundImage = window.WkWebView.convertFilePath(data.nativeURL);;
+                var backgroundImage = Capacitor.convertFileSrc(data.nativeURL);
                 if(localStorage.scriptCahched == undefined){
                     localStorage.setItem('scriptCahched', 'true');
                 }else{

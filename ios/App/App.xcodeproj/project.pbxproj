@@ -14,6 +14,7 @@
 		504EC30F1FED79650016851F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 504EC30E1FED79650016851F /* Assets.xcassets */; };
 		504EC3121FED79650016851F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 504EC3101FED79650016851F /* LaunchScreen.storyboard */; };
 		50B271D11FEDC1A000F3C39B /* public in Resources */ = {isa = PBXBuildFile; fileRef = 50B271D01FEDC1A000F3C39B /* public */; };
+		D85BD7B92A04026F008F19AD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D85BD7B82A04026F008F19AD /* StoreKit.framework */; };
 		F4CFCAD7C719372945A2BB63 /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DA2CAFEE37BBA346EB55352 /* Pods_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		50B271D01FEDC1A000F3C39B /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; path = public; sourceTree = "<group>"; };
 		9DA2CAFEE37BBA346EB55352 /* Pods_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2350D067A7E6F2B2263550 /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
+		D85BD7B82A04026F008F19AD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D8DD008029F7181D0048DCEC /* App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -39,6 +41,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4CFCAD7C719372945A2BB63 /* Pods_App.framework in Frameworks */,
+				D85BD7B92A04026F008F19AD /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +51,7 @@
 		03DD83986D5A1F1CE172C52F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D85BD7B82A04026F008F19AD /* StoreKit.framework */,
 				9DA2CAFEE37BBA346EB55352 /* Pods_App.framework */,
 			);
 			name = Frameworks;

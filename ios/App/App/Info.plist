@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-        <string>Brite</string>
+	<string>Brite</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -18,10 +18,94 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>BUNDLE_ID</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>io.konveier.timo</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb414663592903611</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>REVERSED_CLIENT_ID</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.912018847835-9j3jlgb4vfgbfmi81jhj7i6cru8u1njg</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>briteapp</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>cc.fovea.openwith.ccfoveaopenwithdemo.shareextension</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>ccfoveaopenwithdemo</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array/>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>This app requires constant Bluetooth access to function properly.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>This app requires Bluetooth access to function properly.</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Необходим доступ к календарю для отображения событий</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Необходим доступ к камере, для добавления изображений в задачи, работы с текстовым редактора, ведения дневников и отправки в чате</string>
+	<key>NSContactsUsageDescription</key>
+	<string>This app requires contacts access to function properly.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Необходим доступ к геолакационным данным, для отображения данных о погоде, создания напоминаний, сохранения позиции при добавлении данных</string>
+	<key>NSLocationAlwaysUsageDescrcordova-plugin-statusbaription</key>
+	<string>Необходим доступ к геолакационным данным, для отображения данных о погоде, создания напоминаний, сохранения позиции при добавлении данных</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Необходим доступ к геолакационным данным, для отображения данных о погоде, создания напоминаний, сохранения позиции при добавлении данных</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Необходим доступ к геолакационным данным, для отображения данных о погоде, создания напоминаний, сохранения позиции при добавлении данных</string>
+	<key>NSMainNibFile~ipad</key>
+	<string></string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Необходимо доступ к микрофону для</string>
+	<key>NSMotionUsageDescription</key>
+	<string>This app requires motion detection access to function properly.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>This app requires photo library access to function properly.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Необходим доступ к медиатеке, для добавления изображений в задачи, работы с текстовым редактора, ведения дневников и отправки в чате</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>This app requires reminders access to function properly.</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>Ваши данные будут использоваться, для предоставления персонализированного опыта использования и для улучшения нашего продукта и сервисов</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+		<string>remote-notification</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

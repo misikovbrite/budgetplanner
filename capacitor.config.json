@@ -3,6 +3,7 @@
   "appName": "Brite",
   "webDir": "www",
   "bundledWebRuntime": false,
+
   "plugins": {
     "Keyboard": {
       "resize": "body",

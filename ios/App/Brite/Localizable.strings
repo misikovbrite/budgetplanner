@@ -1,0 +1,51 @@
+"habbitTitleUI" = "Habits";
+"habbitsDesc" = "Keep up with your habits with Brite";
+
+"taskUITitle" = "Tasks";
+"taskSetName" = "Tasks";
+"taskSetDesc" = "Brite task list widget";
+
+"notesTitle" = "Notes";
+"notesSetDesc" = "A widget with quick access to your notes in Brite";
+"notePlaceholder" = "Note";
+"quotesSetTitle" = "Inspiring Quotes";
+"quotesSetDesc" = "Inspirational Quotes from Brite";
+
+"quotesP1Entry" = "Twenty years from now you will be more disappointed by the things that you didn\'t do than by the ones you did do. So throw off the bowlines. Catch the trade winds in your sails. Explore. Dream. Discover.";
+"quotesP1author" = "Mark Twain";
+"quotesP2Entry" = "Great minds discuss ideas. Average minds discuss events. Small minds discuss people.";
+"quotesP2author" = "Eleanor Roosevelt";
+"quotesP3Entry" = "May you live all the days of your life";
+"quotesP3author" = "Jonathan Swift";
+"quotesP4Entry" = "An optimist is a man who is chased up a tree by a lion but enjoys the scenery anyway.";
+"quotesP4author" = "Walter Winchell";
+"quotesP5Entry" = "Don’t let yesterday take up too much of today";
+"quotesP5author" = "Will Rogers";
+"quotesP6Entry" = "Whether you think you can or think you can't, you're right.";
+"quotesP6author" = "Henry Ford";
+"quotesP7Entry" = "Creativity is intelligence having fun.";
+"quotesP7author" = "Albert Einstein";
+"quotesP8Entry" = "You are never too old to set another goal or to dream a new dream";
+"quotesP8author" = "Clive Staples Lewis";
+"quotesP9Entry" = "Life is like riding a bicycle. To keep your balance, you must keep moving";
+"quotesP9author" = "Albert Einstein";
+"quotesP10Entry" = "Today's accomplishments were yesterday's impossibilities";
+"quotesP10author" = "Robert H. Schuller";
+
+"navWork" = "Work Tasks";
+"navPersonal" = "Personal Tasks";
+"navGoals" = "Goals";
+"navHabits" = "Habits";
+"navNotes" = "Notes";
+"navCalendar" = "Calendar";
+"navExpencive" = "Expenses";
+"navProjects" = "Projects";
+"navDiary" = "Diary";
+"navInsights" = "Insights";
+"navMeditation" = "Meditation";
+"navWeather" = "Weather";
+"navIdeas" = "Ideas";
+"navMedia" = "Daily photo";
+"navBody" = "Measurements";
+"navQuotes" = "Quotes";
+"habbitTitleUI" = "Habits";

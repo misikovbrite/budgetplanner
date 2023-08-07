@@ -19,10 +19,10 @@
     --brite-gray: rgb(40, 40, 40);
     --brite-gray-alt: rgb(46, 45, 45);
 
-
     /*--konv-main-bg: #191C32 !important;*/
     --konv-trans-bg: rgba(13, 14, 17, 0.6) !important;
     --konv-trans-light-bg: rgba(13, 14, 17, 0.3) !important;
+    --radius-b-small: 9px;
     --radius-b: 10px;
     --radius-b-big: 25px;
     --keyboard-height: 300px;
@@ -45,7 +45,7 @@
     --body-font-size : 1;
     --font-size: 16px;
 
-
+    --sidebaritem-height: 36px;
 
     --icon-size : 19px;
     --icon-weight: 600;
@@ -64,9 +64,6 @@
 .brite-site{
 
     --konv-main-bg : #fff !important;
-}
-.brite-desktop-not-tablet{
-    --icon-weight: 500;
 }
 
 [data-themestyle="timo-blue-theme"]{
@@ -173,6 +170,7 @@
 :root.konv-theme-dark-deep{
     --konv-cards-bg : rgb(14, 14, 14) !important;
     --elevate-2: rgb(25, 25, 25) !important;
+    --brite-gray: rgb(30, 30, 30);
     --brite-gray-alt: #1f1f1f;
     --font-color-b: rgb(255, 255, 255) !important;
     --konv-main-bg: rgb(0, 0, 0) !important;
@@ -202,21 +200,25 @@ p::selection, div::selection {
     --radius-b: 15px;
     --time-slice-size: 48px;
     --left-padding-content: 4%;
-    --font-size: 18px;
+    --font-size: 17px;
 }
 .brite-desktop-not-tablet{
-    --font-size: 16px;
+    --font-size: 15.5px;
     --font-weight: 400;
     --radius-b: 16px;
+    --icon-weight: 500;
+    --sidebaritem-height: 32px;
+
 }
 .brite-osx{
-    --font-size: 15px;
+    --font-size: 14.5px;
     --font-weight: 400;
     --radius-b: 16px;
 }
 .brite-tablet{
-    --font-size: 16.3px;
+    --font-size: 17px;
     --font-weight: 500;
+    --radius-b: 18px;
 }
 .brite-desktop-not-tablet .brite-desktop-hide{
     display: none !important;
@@ -238,6 +240,15 @@ body {
     background-size: cover !important;
     background-position: center center;
 
+}
+
+.bg-overlay.dark {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    z-index: 9999;
 }
 
 .konv-dark-blue-theme body {
@@ -303,6 +314,9 @@ body {
 }
 .brite-desktop-not-tablet .b-h-c:hover .contextmenu{
     opacity: 1 !important;
+}
+.brite-admin-style.brite-desktop-not-tablet .b-c.l-s[eid]:hover {
+    background: var(--konv-trans-light-bg);
 }
 .b-h-c .check-box:after, .b-h-c .btcom:after{
     width: var(--checkbox-size) !important;
@@ -402,7 +416,7 @@ body {
 @media (min-width: 600px) {
     .brite-toast{
         min-width: 240px;
-        top: 10px;
+        top: calc(var(--sat) + 10px);
         left: 30px;
         transform: translate3d(0%,-200%,0);
     }
@@ -610,6 +624,9 @@ i{
 label.konv-chat-file-upload-wrap.konv-chat-footer-elem.b-b-b {
     opacity: .6;
 }
+
+
+
 .b-b-b {
     cursor: pointer;
     height: 30px;
@@ -640,6 +657,7 @@ label.konv-chat-file-upload-wrap.konv-chat-footer-elem.b-b-b {
     background-color: var(--konv-main-color) !important;
     color: #fff !important;
     transition: 0.2s ease-in-out !important;
+    cursor: pointer;
 }
 .brite-desktop .header-add-element{
     width: auto !important;
@@ -649,6 +667,9 @@ label.konv-chat-file-upload-wrap.konv-chat-footer-elem.b-b-b {
     padding: 0px 9px;
 }
 
+.brite-mobile .header-add-element {
+    display: none !Important;
+}
 .notes-in-project-grid .b-c{
     background-color: var(--elevate-2) !Important;
 }
@@ -679,7 +700,7 @@ label.konv-chat-file-upload-wrap.konv-chat-footer-elem.b-b-b {
         transition: 0.3s ease-in-out;
 
     }
-    .left-side-bar-menu-hide[data-viewmode="timeline-mode-timo"] .timeline-wrapper, .left-side-bar-menu-hide[data-viewmode="day-mode-timo"] .timeline-wrapper, .left-side-bar-menu-hide[data-viewmode="mounth-mode-timo"] .timeline-wrapper{
+    .left-side-bar-menu-hide[data-viewmode="timeline-mode-timo"] .timeline-wrapper, .left-side-bar-menu-hide[data-viewmode="day-mode-timo"] .timeline-wrapper, .left-side-bar-menu-hide[data-viewmode="freeform-mode-timo"] .timeline-wrapper{
         width: 56vw !important;
         transition: 0.3s ease-in-out;
     }
@@ -799,6 +820,7 @@ label.konv-chat-file-upload-wrap.konv-chat-footer-elem.b-b-b {
 }
 
 
+
 .inappBrouser {
     color: var(--konv-main-color);
 }
@@ -844,7 +866,7 @@ label.konv-chat-file-upload-wrap.konv-chat-footer-elem.b-b-b {
 }
 .breadcrumb-top, .breadcrumb-top-current{
     max-width: 100px;
-    /* padding: 0px 10px; */
+    padding: 0px 5px;
     align-items: center;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -942,6 +964,10 @@ label.konv-chat-file-upload-wrap.konv-chat-footer-elem.b-b-b {
     padding: 10px;
     box-sizing: border-box;
     max-height: 355px !important;
+}
+.brite-tablet .notif-picker{
+    min-height: 50vh;
+    height: auto;
 }
 .super-tiny-modal{
     width: 90%;
@@ -1180,7 +1206,7 @@ label.konv-chat-file-upload-wrap.konv-chat-footer-elem.b-b-b {
 .mobile-menu-item.timo-menuitem{
     padding-bottom: 0px !important;
     min-height: 55px !important;
-    min-width: 45px !important;
+    min-width: 45px;
     color: var(--lighter-color-b);
     display: inline-flex;
     align-items: center;
@@ -1399,7 +1425,7 @@ input[type=number] {
 .brite-desktop [tct] .timo-input-style{
     max-width: 100%;
 }
-.brite-desktop .new-task-context-panel{
+.brite-desktop-not-tablet .new-task-context-panel{
     position: fixed;
     background-color: var(--konv-trans-bg);
     display: flex;
@@ -1427,7 +1453,12 @@ input[type=number] {
 .brite-desktop [eid] .task-input-form{
     top: 0px !important;
 }
-.brite-desktop [tct] .focused-form-brite{
+.brite-desktop-not-tablet [tct] .focused-form-brite{
+    opacity: 1 !important;
+    pointer-events:all;
+    margin-top: 0px !important;
+}
+.brite-tablet:not(.tablet-new-design) [tct] .focused-form-brite{
     opacity: 1 !important;
     pointer-events:all;
     margin-top: 0px !important;
@@ -1493,6 +1524,7 @@ input[type=number] {
     padding: 5px 7px !important;
     min-height: 35px;
 }
+
 .context-menu-item{
     transition: 0.15s ease-in-out;
     /*border-bottom: 1px solid rgba(128, 128, 128, 0.2);*/
@@ -1506,6 +1538,10 @@ input[type=number] {
     width: 100%;
     box-sizing: border-box;
     position: relative;
+}
+.brite-tablet .context-menu-item{
+    font-size: 107%;
+    min-height: 38px;
 }
 .remove-entry.context-menu-item, .remove-entry.context-menu-item i, [data-konveitorsetting="delete"], [data-konveitorsetting="delete"] i{
     color: rgb(246, 103, 103) !important;
@@ -1969,7 +2005,7 @@ pre {
     padding-right: 7px;
 }
 .brite-desktop .context-menu-item{
-    border-radius: 7px;
+    border-radius: var(--radius-b-small);
     border-bottom: none !important;
 }
 .contextmenuwrap-remove {
@@ -2006,8 +2042,8 @@ pre {
     height: 30px;
     margin: 0px 5px 0px 5px;
     transition: 0.2s cubic-bezier(1, 0.1, 0, 0.93);
-
 }
+
 .show-menu-floating i{
     font-size: 18px !important;
 }
@@ -2025,6 +2061,8 @@ pre {
     height: 100%;
     box-sizing: border-box;
     /*background-color: var(--konv-sidebar-bg);*/
+    z-index: 2;
+    background-color: var(--konv-main-bg);
 }
 .menu-main-area {
     max-width: 70%;
@@ -2122,7 +2160,7 @@ pre {
     margin-bottom: 0px !important;
 }
 .brite-desktop .hide-completed-tasks .completed-widget-timo .task-card-body-timo{
-    min-height: 5px !important;
+    min-height: 1px !important;
 }
 .hide-completed-tasks-anim .completed > *{
     opacity: 0 !important;
@@ -2138,10 +2176,16 @@ pre {
 .show-hidden-tasks .completed{
     transition: 0.8s cubic-bezier(0.42, 0, 0, 1.14) !important;
 }
-.brite-mobile .timeline-calendar {
-    margin-top: 14%;
-    height: calc(90vh - 82px) !important;
-}
+
+
+/*.brite-mobile .timeline-calendar {*/
+/*    margin-top: 14%;*/
+/*    height: calc(90vh - 82px) !important;*/
+/*    max-height: 85vh !important;*/
+/*    !* min-height: 165vh !important; *!*/
+/*    overflow-y: auto !important;*/
+/*    overflow-x: hidden !important;*/
+/*}*/
 .timeline-wrapper-cal{
     height: 100%;
     position: absolute;
@@ -2316,12 +2360,19 @@ pre {
 .eventcard:not(.inline-event).b-c .btcom {
     max-height: 17px !important;
     transform: scale(0.8);
+    min-width: 18px !important;
+    width: 19px !important;
 }
 .eventcard:not(.inline-event).b-c .bc-t {
     padding-bottom: 0px;
     margin-bottom: 2px;
-    font-size: 15px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    display: block !important;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    overflow: hidden;
 }
 .timeline-calendar .eventcard{
     cursor: grab;
@@ -2751,6 +2802,7 @@ label.w-c-b {
 }
 .brite-main-screen-bg.widgets-hidden .timeline-widgets{
     background-color: var(--konv-main-bg) !important;
+    border-radius: 10px !important;
 }
 .brite-main-screen-bg.brite-desktop .brite-navbar-inner{
     max-height: 35px;
@@ -2894,9 +2946,10 @@ label.w-c-b {
     border-radius: 8px;
 }
 .brite-desktop .property-item-brite{
-    min-height: 60px;
-    height: 60px !important;
+    min-height: 55px;
+    height: 55px !important;
     border-radius: 7px !important;
+    min-width: 55px;
 }
 .brite-desktop-not-tablet .property-item-brite{
     min-width: calc(100% / 8);
@@ -3046,6 +3099,7 @@ label.w-c-b {
     margin-right: 11.5px;
     transform: scale(0.9) !important;
 }
+
 .chip{
     font-size: 85%;
     transform: scale(1) !important;
@@ -3068,6 +3122,9 @@ label.w-c-b {
     position: relative;
     background-color: var(--brite-gray);
     color: var(--lighter-color-b);
+}
+.konv-table .chip{
+    min-height: 25px !important;
 }
 .b-c .chip{
     font-size: 70%;
@@ -3140,6 +3197,7 @@ label.w-c-b {
 .brite-mobile .details-card-body {
     min-height: 65%;
     margin-bottom: 38%;
+    padding-bottom: calc(var(--keyboard-height) + 55px) !important;
 }
 .konv-keyboard-visible.brite-mobile .details-card-body{
     min-height: 100%;
@@ -3347,6 +3405,23 @@ label.w-c-b {
 .bc-p .editor-context-menu{
     display: none;
 }
+div.searchBar{
+    position: relative;
+}
+div.searchBar i{
+    position: absolute;
+    top: 13px;
+    left: 7px;
+}
+input.input-search-mention {
+    border-radius: 0 !important;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+
+    padding-left: 30px !important;
+}
+
 /*// -----------------------------------------------------------------*/
 /*// --------end--end--end--end--   POMADORO     --end--end--end--end---------*/
 /*// -----------------------------------------------------------------*/
@@ -3453,7 +3528,9 @@ label.w-c-b {
     position: absolute;
     right: 15%;
 }
-
+.brite-tablet .desktop-launcher-button{
+    right: 19%;
+}
 .right-panel {
     padding-top: 0px !important;
     right: 12px !important;
@@ -3462,7 +3539,7 @@ label.w-c-b {
     max-height: 600px !important;
     border-radius: 15px;
     box-shadow: 0px 0px 25px rgba(0,0,0,0.07);
-    top: 50px !important;
+    top: calc(var(--sat) + 50px) !important;
     min-width: 335px;
     padding-bottom: 20px;
     box-sizing: border-box;
@@ -3478,9 +3555,7 @@ label.w-c-b {
     right: calc(var(--right-panels) + 10px) !important;
 }
 .brite-tablet .right-panel{
-    max-height: 450px !important;
-    transform: scale(0.9) translateX(15px) translateY(-20px);
-    padding-top: 10px !important;
+    max-height: 75vh !important;
 }
 .side-bar-right{
     display: flex;
@@ -3499,8 +3574,9 @@ label.w-c-b {
     /*height: 95%;*/
     height: 100%;
     min-width: 275px !important;
-    z-index: 999999999;
-    overflow-y: auto;
+    /*z-index: 999999999;*/
+    z-index: 999998;
+    overflow-y: hidden;
     overflow-x: hidden;
     border-right: var(--border-style);
     box-sizing: border-box;
@@ -3508,6 +3584,9 @@ label.w-c-b {
 }
 .right-panel{
     min-width: 335px !important;
+}
+.brite-tablet .right-panel{
+    min-width: 375px !important;
 }
 .sheet-modal-backdrop-shadow, .toast-modal-backdrop-shadow{
     position: absolute;
@@ -3553,6 +3632,15 @@ label.w-c-b {
     background-position: center center;
 
 }
+
+
+@media (max-width: 800px) {
+    .brite-side-modal.small-screen-padding-b-8 .brite-sidebar-content {
+        padding-bottom: 80px !important;
+    }
+}
+
+
 .konv-theme-light .d-card{
     background-color: var(--konv-cards-bg);
 }
@@ -3595,6 +3683,7 @@ label.w-c-b {
     padding-bottom: 10vh;
     max-height: calc(100% - 50px);
     padding: 0px 17px !important;
+    min-height: 75px;
 }
 .brite-desktop .brite-menu-panel .search-input-style{
     width: 100%;
@@ -3615,9 +3704,15 @@ label.w-c-b {
     padding-bottom: 10vh !important;
     max-height: calc(90% - var(--keyboard-height)) !important;
 }
-.brite-desktop .brite-side-header{
+.brite-desktop:not(.brite-osx) .brite-side-header{
     padding: 0px 10px !important;
 }
+
+.konv-keyboard-visible .brite-chat-modal .brite-side-header{
+    position: sticky;
+    position: -webkit-sticky;
+}
+
 .brite-mobile .d-card .brite-sidebar-content {
     height: 75% !important;
     max-height: 74% !important;
@@ -3645,6 +3740,7 @@ label.w-c-b {
     justify-content: space-between;
     min-height: var(--header-height);
     z-index: 999;
+    position: relative;
 }
 .brite-tablet .brite-side-modal:not(.dcard-tiny, .day-editor-modal, .subscription-modal) .brite-side-header{
     padding-top: var(--sat) !important;
@@ -3843,8 +3939,8 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
     font-size: 13px;
 }
 .brite-mobile .w-b-a{
-    padding: 0px 12px !important;
-    min-width: 45px;
+    padding: 0px 0px 0px 10px !important;
+    min-width: 53px;
     min-height: 34px;
     pointer-events: all !important;
     display: flex;
@@ -3920,9 +4016,6 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
 [data-widgetstate="closed"] {
     min-height: 75px;
 }
-.widget-card-add-brite-modal{
-    z-index: 99999 !important;
-}
 .widget-card-add-brite-modal .brite-sidebar-content {
     padding-top: 0px !important;
 }
@@ -3935,26 +4028,37 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
 .brite-desktop-not-tablet [data-viewmode="week-mode-timo"] .timanagcard:hover .timeline-bottom-wrapper{
     opacity: 0;
 }
-.brite-desktop[data-viewmode="week-mode-timo"] .timanagcard{
-    padding-top: 0px !important;
-}
-[data-viewmode="freeform-mode-timo"] .t-c-h {
+[data-viewmode="freeform-mode-timo"] .timanagcard, [data-viewmode="freeform-mode-timo"] .timeline-bottom-wrapper {
     display: none !important;
 }
-[data-viewmode="freeform-mode-timo"] .t-t-c {
-    background-color: rgba(0,0,0,0) !important;
-    margin-bottom: 0px !important;
+.schedule-mode-wrap{
+    padding-bottom: 25vh;
+    max-width: 800px;
 }
-[data-viewmode="freeform-mode-timo"] .timanagcard {
-    background-color: var(--konv-cards-bg);
+.schedule-mode{
+    display: none;
+    min-height: 55vh !important;
+    max-width: 800px;
+    padding: 2%;
+    padding-left: 55px;
+    margin: 2% 0% 2% 2%;
+    justify-content: flex-start;
+    width: 96%;
 }
+[data-viewmode="freeform-mode-timo"] .schedule-mode{
+    display: block !important;
+}
+.schedule-mode .eventcard:not(.inline-event){
+    position: relative !important;
+}
+
 .quotes-bg{
     position: absolute;
     left: 0px;
     width: 100%;
     height: 101%;
     border-radius: inherit;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.5);
     top: 0px;
 }
 
@@ -4011,7 +4115,7 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
 .fast-action-visible .fast-action-open i{
     transform: rotate(45deg);
 }
-.brite-mobile .fast-action-mobile{
+.brite-mobile .fast-action-mobile, .brite-tablet .fast-action-mobile{
     align-items: flex-end;
     justify-content: flex-end;
     display: flex;
@@ -4038,6 +4142,9 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
     justify-content: flex-end !important;
     align-items: flex-end !important;
     min-height: 400px;
+}
+.brite-tablet .fast-actions-modal-wrapper{
+    width: 97% !important;
 }
 .switch-fast-add-type-brite{
     display: flex !important;
@@ -4068,7 +4175,7 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
     border-radius: var(--radius-b);
     margin-left: 10px;
 }
-.brite-mobile .fast-action-icon-brite{
+.brite-mobile .fast-action-icon-brite, .brite-tablet .fast-action-icon-brite{
     width: 50px !important;
     height: 50px !important;
     border-radius: 100px !important;
@@ -4153,7 +4260,16 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
 /*// -----------------------------------------------------------------*/
 /*// ------------------------       MOBILE ONLY         -------------------------*/
 /*// -----------------------------------------------------------------*/
+.brite-mobile[data-viewmode="week-mode-timo"] .today .this-day-string{
+    background-color: var(--konv-main-color);
+    border-radius: 10px;
+    color: #fff !important;
+}
+.brite-desktop[data-viewmode="week-mode-timo"] .today .days-second-col .konv-text{
 
+    color: var(--konv-main-color) !important;
+
+}
 .w-i-t {
     font-weight: 600;
     color: var(--font-color-b) !important;
@@ -4471,7 +4587,7 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
         left: -120px !important;
         overflow: visible !important;
         height: calc(93vh - 82px) !important;
-        padding-bottom: 50px !important;
+        padding-bottom: 80vh !important;
     }
     .konv-activate-chat {
         transition: 0.3s ease-in-out;
@@ -4563,16 +4679,13 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
         min-width: 120px;
         margin-left: 3%;
     }
-    .brite-mobile[data-viewmode="week-mode-timo"] .today .this-day-string{
-        background-color: var(--konv-main-color);
-        border-radius: 10px;
-        color: #fff !important;
-    }
+
 
     .brite-mobile[data-viewmode="week-mode-timo"] .timeline-body-timo .t-t-c{
         padding: 2px 0px !important;
         margin-bottom: 0px !important;
         min-height: 38px !important;
+        border-radius: 7px !important;
     }
     .brite-mobile[data-viewmode="week-mode-timo"] .timeline-body-timo .t-t-c:last-child{
         margin-bottom: 160px !important;
@@ -4642,6 +4755,10 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
     }
     [data-viewmode="week-mode-timo"] .timeline-wrapper .w-b-a{
         font-size: 75% !important;
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+        min-width: 30px !important;
+        min-height: 30px !important;
     }
     [data-viewmode="week-mode-timo"] .timeline-wrapper .timanagcard{
         max-height: 48vh;
@@ -4671,6 +4788,7 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
         min-height: 300px;
         margin-left: 3px;
         margin-bottom: 6px !important;
+        background-color: var(--konv-cards-bg);
     }
 
 
@@ -4836,6 +4954,13 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
     border: var(--border-style);
     font-weight: var(--font-weight);
 }
+.label-button {
+    max-width: 80%;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 .brite-button.brite-active{
     border-color: var(--konv-main-color) !important;
 }
@@ -4851,6 +4976,15 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
     margin-bottom: 2px !important;
     padding: 5px 5px !important;
     box-sizing: border-box;
+}
+.details-context-menu-item{
+    background-color: rgba(0,0,0,0) !important;
+    border: none !Important;
+    border-radius: 6px !Important;
+    font-size: 16.5px !important;
+    min-height: 40px;
+    margin-bottom: 3px !important;
+    cursor: pointer;
 }
 .brite-mobile .brite-button{
     padding: 13px 13px;
@@ -5008,7 +5142,15 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
 /*// ------------------------       TABLET         -------------------------*/
 /*// -----------------------------------------------------------------*/
 
-
+.widgets-list-hidden{
+    display: flex !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+}
+.widgets-list-hidden .b-c{
+    min-width: 93.5px;
+    min-height: 91px;
+}
 @media (min-width: 600px) and (max-width: 1225px) {
     .tablet-f-w{
         width: 90% !important;
@@ -5027,7 +5169,7 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
     }
     .konv-chat-user-selection-wrap {
         overflow-x: auto;
-        max-width: 325px;
+        max-width: 525px;
     }
     .expenceSumm{
         pointer-events: none !important;
@@ -5073,20 +5215,20 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
     .context-menu-item{
         padding: 5px 10px !important;
     }
-    [data-currentactivepage="mainscreen"][data-viewmode="day-mode-timo"] .timeline-widgets, .visible-widgets-panel .timeline-widgets, [data-currentactivepage="mainscreen"][data-viewmode="timeline-mode-timo"] .timeline-widgets, [data-currentactivepage="mainscreen"][data-viewmode="mounth-mode-timo"] .timeline-widgets{
+    [data-currentactivepage="mainscreen"][data-viewmode="day-mode-timo"] .timeline-widgets, [data-currentactivepage="mainscreen"][data-viewmode="freeform-mode-timo"] .timeline-widgets, .visible-widgets-panel .timeline-widgets, [data-currentactivepage="mainscreen"][data-viewmode="timeline-mode-timo"] .timeline-widgets, [data-currentactivepage="mainscreen"][data-viewmode="freeform-mode-timo"] .timeline-widgets{
         transform: translate(0%);
         border-radius: var(--radius-b);
         /*width: 25vw !important;*/
         right: 0vw;
         z-index: 9997;
     }
-    .brite-tablet[data-currentactivepage="mainscreen"][data-viewmode="day-mode-timo"] .timeline-widgets, .brite-tablet.visible-widgets-panel .timeline-widgets, .brite-tablet[data-currentactivepage="mainscreen"][data-viewmode="timeline-mode-timo"] .timeline-widgets, .brite-tablet[data-currentactivepage="mainscreen"][data-viewmode="mounth-mode-timo"] .timeline-widgets{
+    .brite-tablet[data-currentactivepage="mainscreen"][data-viewmode="day-mode-timo"] .timeline-widgets, .brite-tablet.visible-widgets-panel .timeline-widgets, .brite-tablet[data-currentactivepage="mainscreen"][data-viewmode="timeline-mode-timo"] .timeline-widgets, .brite-tablet[data-currentactivepage="mainscreen"][data-viewmode="freeform-mode-timo"] .timeline-widgets{
         transform: translate(100%);
     }
     .brite-tablet.widgets-hidden .timeline-widgets{
         transform: translateX(0px) !important;
     }
-    .brite-desktop[data-viewmode="day-mode-timo"] .timeline-wrapper{
+    .brite-desktop[data-viewmode="day-mode-timo"] .timeline-wrapper, .brite-desktop[data-viewmode="freeform-mode-timo"] .timeline-wrapper{
         padding-right: 15px;
         max-width: 60% !important;
     }
@@ -5327,7 +5469,6 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
         font-size: 100% !important;
     }
     .timeline-calendar {
-        padding-top: 1vh !important;
         padding-right: 10px;
     }
     .remove-widget-entry{
@@ -5354,8 +5495,8 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
         color: var(--font-color-b) !important;
     }
     .k-c-c{
-        width: 20px !important;
-        height: 20px !important;
+        width: 25px !important;
+        height: 25px !important;
     }
     .timo-menuitem svg{
         width: 16px !important;
@@ -5428,8 +5569,8 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
         opacity: 0.7;
     }
     .calendar-status{
-        width: 15px !important;
-        height: 15px !important;
+        width: 17px !important;
+        height: 17px !important;
         top: 3px !important;
     }
     .active-calednar-element .calendar-status:after {
@@ -5471,6 +5612,9 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
         border-radius: 0px !important;
         padding: 5px 30px;
     }
+    .brite-osx .timeline-widgets{
+        top: calc(var(--header-height) + 0px + var(--sat));
+    }
     [data-viewmode="week-mode-timo"].active-cal-week .sortableday {
         width: 15vw !important;
         overflow: visible !important;
@@ -5509,11 +5653,11 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
     .proceed-to-auth{
         cursor: pointer;
     }
-    [data-currentactivepage="mainscreen"][data-viewmode="day-mode-timo"] #timeline-widgets-close, .visible-widgets-panel #timeline-widgets-close,[data-currentactivepage="mainscreen"][data-viewmode="timeline-mode-timo"] #timeline-widgets-close, [data-currentactivepage="mainscreen"][data-viewmode="mounth-mode-timo"] #timeline-widgets-close{
+    [data-currentactivepage="mainscreen"][data-viewmode="day-mode-timo"] #timeline-widgets-closeб, .visible-widgets-panel #timeline-widgets-close,[data-currentactivepage="mainscreen"][data-viewmode="timeline-mode-timo"] #timeline-widgets-close, [data-currentactivepage="mainscreen"][data-viewmode="freeform-mode-timo"] #timeline-widgets-close{
         opacity: 0;
         visibility: hidden;
     }
-    [data-viewmode="day-mode-timo"] .timeline-widgets-wrapper, [data-viewmode="timeline-mode-timo"] .timeline-widgets-wrapper, [data-viewmode="mounth-mode-timo"] .timeline-widgets-wrapper{
+    [data-viewmode="day-mode-timo"] .timeline-widgets-wrapper, [data-viewmode="timeline-mode-timo"] .timeline-widgets-wrapper, [data-viewmode="freeform-mode-timo"] .timeline-widgets-wrapper{
         opacity: 1 !important;
     }
     [data-currentactivepage="mainscreen"][data-viewmode="day-mode-timo"] .timeline-widgets-close{
@@ -5576,6 +5720,12 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
         height: 80% !important;
         border-radius: var(--radius-b) !important;
         opacity: 0;
+    }
+    .desktop-centered-modal{
+        --sat: 0px !important;
+    }
+    .brite-tablet .main-menu-modal{
+        --sat: env(safe-area-inset-top) !important;
     }
 }
 
@@ -5651,6 +5801,12 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
 .k-c-c i {
     font-size: 12px;
     color: var(--light-color-b);
+}
+.eventcard .k-c-c{
+    width: 20px !important;
+    height: 20px !important;
+    top: 2px !important;
+    right: 1px !important;
 }
 /*// ------------------------        DIARY        -------------------------*/
 
@@ -5896,6 +6052,9 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
     margin-bottom: 15px;
     min-height: 115px;
     border: var(--border-style);
+}
+.details-card-modal-wrap.events-timeline-details-card{
+    min-height: 85vh !important;
 }
 
 /*// -----------------------------------------------------------------*/
@@ -6170,20 +6329,27 @@ div.picker {
     margin-left: 20px;
     display: none;
 }
+.calendar-icon-wrapper{
+    width: 35px;
+    min-width: 35px;
+    height: 35px;
+    margin-top: 0px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .calendar-side-icon{
-    width: 13px;
-    min-width: 13px;
-    height: 13px;
+    width: 15px;
+    min-width: 15px;
+    height: 15px;
     border-radius: 100px;
     background-color: var(--konv-main-color);
-    margin-top: -2px;
-    margin-right: 5px;
-    margin-left: 10px;
     transition: 0.3s ease-in-out;
     border: 2px solid var(--konv-main-color);
 }
 .brite-desktop .calendar-side-icon{
-    margin-top: 2px;
+    margin-top: 1px;
 }
 .calendar-label-events{
     font-size: 80% !important;
@@ -6209,11 +6375,28 @@ div.picker {
     max-height: 250px !important;
     min-height: 480px !important;
 }
+
+.event-location-modal-picker .find-location-icon{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.location-option.context-menu-item{
+    flex-direction: row;
+}
+
+.location-option .location-title {
+    width: 100%;
+    white-space: break-spaces;
+    margin-left: 13px;
+}
 .calendar-context-wrap{
     min-width: 250px;
 }
 .calendar-full-day-events.timeline-full-day-cal{
-    min-height: 76px;
+    min-height: 45px;
 }
 .desktop-one-line-calendar {
     min-height: 50px;
@@ -6276,15 +6459,7 @@ div.picker {
     z-index:99;
 }
 
-.full-days-events-enabled .details-full-day-cal{
-    height: 30px !important;
-    position: relative;
-    margin-bottom: 0px;
-}
 
-.brite-mobile .full-days-events-enabled .details-full-day-cal{
-    height: 30px !important;
-}
 .calendar-week-header{
     background-color: rgba(0,0,0,0) !important;
 }
@@ -6292,18 +6467,15 @@ div.picker {
     margin-left: -35px;
 }
 .details-full-day-cal{
-    margin-bottom: 5px;
-    position: absolute;
     left: 0px;
     width: 100%;
     box-sizing: border-box;
-}
-
-.brite-mobile .details-full-day-cal{
+    height: 35px !important;
     position: sticky !Important;
     top: -4px;
     z-index: 9;
 }
+
 .inline-tiny-cal{
     border-bottom: none !important;
 }
@@ -6474,6 +6646,9 @@ div.picker {
 #eventsTimeline{
     overflow-y: hidden !important;
 }
+.brite-desktop #eventsTimeline{
+    padding-left: 10px;
+}
 .brite-mobile #eventsTimeline{
     overflow: hidden;
 }
@@ -6527,7 +6702,6 @@ div.picker {
 }
 .brite-mobile .calendar-minified .cal-month-date{
     font-weight: 500;
-    font-size: 115%;
     border-radius: 100px !important;
 }
 .month-hidden-events {
@@ -6568,9 +6742,7 @@ div.picker {
     min-height: 60vh;
     width: 100%;
     position: relative;
-    /*overflow: hidden;*/
     padding-bottom: 3px;
-    padding-top: 6px;
 }
 
 [calendar-style="week"] .details-inline-calendar .details-full-day-cal{
@@ -6581,9 +6753,7 @@ div.picker {
     width: 100%;
     border-right: var(--border-style);
     position: relative;
-    /*overflow: hidden;*/
     padding-bottom: 3px;
-    padding-top: 6px;
 }
 .details-inline-calendar-week-mode .ts{
     margin-left:0px !important;
@@ -6750,18 +6920,20 @@ div.picker {
     background-color: var(--konv-main-color);
     z-index:2;
 }
-/*.active-calednar-element .calendar-status:after {*/
-/*    width: 25px;*/
-/*    height: 25px;*/
-/*    content: "\f00c";*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*}*/
+.active-calednar-element .calendar-side-icon.fas:after {
+    width: inherit;
+    height: inherit;
+    content: "\f00c";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 12px;
+}
 .calendar-status{
     font-family: 'Font Awesome 6 Pro';
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     border-radius: 8px;
     color: #fff !important;
     font-weight: 800;
@@ -6807,7 +6979,6 @@ div.picker {
     transition: 0.4s ease-in-out;
     overflow: hidden;
     max-height: 100%;
-    padding-top: 15px;
     padding-bottom: 24px;
     display: flex;
     flex-direction: column;
@@ -6818,7 +6989,7 @@ div.picker {
     font-size: 12px;
     top: 0px;
     font-weight: 400;
-    line-height: 6px;
+    line-height: 8px;
     margin-bottom: 2px;
     min-width: 50%;
 }
@@ -7068,7 +7239,6 @@ div.picker {
         overflow-x: hidden;
         overflow-y: auto;
         height: 67vh;
-        padding-top: 6px !important;
     }
     .prevent-scroll{
         overflow-y: hidden !important;
@@ -7197,10 +7367,44 @@ div.picker {
 .share-modal{
     z-index: 9999999999999 !important;
 }
+
+.share-button{
+    display: flex;
+    flex-direction: row;
+    padding: 5px 10px;
+    border: 2px solid var(--brite-gray);
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--font-color-b);
+}
+
+
+.share-button.share-brite{
+    background-color: var(--konv-trans-light-bg);
+    border-radius: 10px !important;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+.share-button.share-project{
+    border-color: var(--font-color-b);
+}
+
+.share-button .icon {
+    margin-right: 10px;
+}
 .tool-bar-center {
     display: flex;
     height: 30px;
     align-items: center;
+}
+.brite-admin-style .tool-bar-center{
+    display: flex;
+    height: 30px;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
 }
 .widget-card-icon{
     width: 200px;
@@ -7322,11 +7526,12 @@ div.picker {
 .brite-mobile.brite-search-active .magnifier-search, .brite-mobile.brite-search-active .brite-main-header{
     opacity: 0 !important;
 }
-.brite-mobile.brite-search-active .done-search.universal-done-button{
+.brite-mobile.brite-search-active .done-search.universal-done-button, .active-search.universal-done-button{
     opacity: 1 !important;
 
     pointer-events: auto !important;
 }
+
 .brite-mobile.brite-search-active .discover-search{
     width: 78%;
 }
@@ -7454,14 +7659,70 @@ div.picker {
 .brite-chat-modal .brite-sidebar-content{
     transition: 0.3s ease-in-out;
 }
+.konv-ac-chat .bc-h .bc-d{
+    padding-right: 30px;
+}
+
+.brite-chat-modal.supportChat .brite-side-header{
+    background-color: var(--konv-main-color);
+    border-radius: var(--radius-b) var(--radius-b) 0px 0px;
+    color: #fff !important;
+}
+
+.brite-chat-modal .brite-side-header .support-team-container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.brite-chat-modal .brite-side-header{
+    background-color: var(--konv-main-bg);
+    border-radius: var(--radius-b);
+}
+
+.brite-chat-modal .brite-side-header .support-team-container .support-team-items{
+    display: flex;
+    margin-right: 20px;
+}
+
+.support-team-container .support-team-item{
+    width: 35px;
+    height: 35px;
+    background-size: contain;
+    border: 4px solid var(--konv-main-color);
+    border-radius: 50%;
+    margin-right: -10px;
+}
+
+
+
+.support-team-container .suport-team-info .support-team-title{
+    font-weight: 600;
+}
+
+.support-team-container .suport-team-info .support-team-desc{
+    font-weight: 200;
+    font-size: 80%;
+}
+
 .brite-chat-modal .modal-footer{
     flex-direction: column;
-
+    padding-top: 0px !important;
     bottom: 0% !important;
     width: 100% !important;
     border-radius: 0px 0px 16px 16px;
     min-height: 65px;
     left: 48%;
+    justify-content: flex-start;
+    padding-top: 3px !important;
+}
+.brite-chat-modal .chat-link{
+    color: var(--konv-main-color);
+    text-decoration: none;
+}
+.brite-desktop .brite-chat-modal .modal-footer{
+    background-color: rgba(0,0,0,0) !important;
 }
 .brite-mobile.konv-keyboard-visible .brite-chat-modal .brite-sidebar-content {
     transform: translateY(-50px);
@@ -7524,8 +7785,38 @@ div.picker {
     border-radius: 10px !important;
     border: none !important;
     background-color: var(--brite-gray);
+    word-break: break-word;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    font-size: 90% !important;
+    max-height: 200px;
+    transition: all 300ms ease;
 }
 
+@keyframes lineInserted {
+    from {
+        height: 0;
+    }
+    to {
+        height: 20px;
+    }
+}
+
+.operator-form-konver .operator-input-field{
+    animation-duration: 300ms;
+    animation-name: lineInserted;
+    transition: height 300ms;
+}
+
+.header-avatar-menu i {
+    color: inherit;
+}
+
+.operator-form-konver {
+    padding-bottom: 10px !important;
+}
 
 .image-preloader-container{
     width: 100%;
@@ -7575,7 +7866,7 @@ div.picker {
 
 .scrollDown {
     position: fixed;
-    left: 10px;
+    left: 20px;
     bottom: 14%;
     width: 40px;
     height: 40px;
@@ -7654,6 +7945,26 @@ div.picker {
     width: 90%;
     cursor: pointer;
 }
+.user-details-ac.space{
+    width: 100%;
+    position: relative;
+
+}
+.space-start-chat{
+    border-radius: 7px;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translatey(-50%);
+    opacity: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+}
 .brite-mobile .spaces-desktop-selector {
     position: absolute;
     bottom: 0px;
@@ -7672,6 +7983,7 @@ div.picker {
     margin-top: var(--sat);
     left: 9px;
     width: 93.5%;
+    /*background-color: var(--konv-sidebar-bg);*/
 }
 .edit-space {
     right: 45px !important;
@@ -7911,6 +8223,7 @@ div.picker {
     border-radius: var(--radius-b);
     color: #fff;
 }
+
 .agreement-row{
     opacity: 0.3;
     width: 100%;
@@ -8303,6 +8616,7 @@ div.picker {
 }
 .brite-desktop-not-tablet .option-select{
     margin-bottom: 3% !important;
+    padding-right: 12px !important;
 }
 .brite-desktop-not-tablet .option-select .item-input-wrap:after{
     display: none !Important;
@@ -8345,6 +8659,7 @@ div.picker {
     font-size: 105%;
     justify-content: space-between;
     box-sizing: border-box;
+    background-color: rgba(0,0,0,0) !important;
 }
 .brite-desktop .option-select-update{
     min-height: 35px;
@@ -8714,7 +9029,7 @@ input::placeholder{
 }
 
 .bigimage.onboarding-step-brite .image-onboarding{
-    min-height: 80% !important;
+    min-height: 70% !important;
 }
 .bigimage.onboarding-step-brite .title-onboarding{
     margin: 10% 0px 5%;
@@ -8789,9 +9104,12 @@ input::placeholder{
     box-sizing: border-box;
     align-items: center;
     margin-bottom: 3%;
-    font-weight: 500;
+    font-weight: 400;
     transition: var(--alt-transition);
     cursor: pointer;
+}
+.brite-desktop-not-tablet .brite-onb-button:hover{
+    background-color: var(--konv-trans-color);
 }
 
 .onb-grid-style .brite-onb-button{
@@ -8828,6 +9146,7 @@ input::placeholder{
 }
 .brite-onb-button-icon i{
     color: inherit !important;
+    font-size: 25px;
 }
 .brite-onboaring-continue{
     position: absolute;
@@ -8835,7 +9154,7 @@ input::placeholder{
     transform: translate(-50%);
     bottom: calc(var(--sab) + 3%);
     width: 90%;
-    height: 50px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8871,6 +9190,7 @@ input::placeholder{
 }
 .brite-onb-button.active-onb-button{
     border-color: var(--konv-main-color);
+    background-color: var(--konv-trans-color);
 }
 
 
@@ -9277,7 +9597,7 @@ input::placeholder{
     height: 30px;
     margin: 0;
     vertical-align: top;
-    background: #ffffff;
+    background: var(--ligher-color-b);
     border: 1px solid #bbc1e1;
     border-radius: 30px;
     outline: none;
@@ -9297,7 +9617,7 @@ input::placeholder{
     top: 2%;
     width: 30px;
     height: 98%;
-    background-color: var(--konv-main-color);
+    background-color: #fff;
     border-radius: 50%;
     transform: translateX(0);
     transition: 0.2s ease-in-out;
@@ -9327,7 +9647,7 @@ input::placeholder{
 #additionalpage {
     /*max-width: 700px;*/
     position: relative;
-    min-height: 80vh;
+    min-height: calc(100vh - var(--header-height) - var(--sat));
     padding-bottom: 100px;
     display: flex;
     flex-direction: column;
@@ -9991,7 +10311,7 @@ input::placeholder{
     position: absolute;
     border: 1px solid  var(--konv-main-color);
     z-index: -1;
-    height: 90%;
+    height: calc(100% - 1px);
     border-radius: 9.5px;
     box-sizing: border-box;
     -webkit-animation: fade-in-op-4 0.35s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -10006,12 +10326,13 @@ input::placeholder{
 }
 .ui-selected.eventcard:not(.inline-event):before, .ui-selected.bg-colored:before{
     background: #fff;
+    border-radius: inherit !important;
 }
 .brite-desktop-not-tablet .ui-selected:before{
     border-radius: 5px;
 }
 .ui-selected.kanban:before{
-    border-radius: var(--radius-b) !important;
+    border-radius: inherit !important;
 }
 .b-c.ui-selected:before {
     height: 100%;
@@ -10107,7 +10428,7 @@ input::placeholder{
     width: 30px;
     height: 25px;
     position: absolute;
-    top: 1px;
+    top: 0px;
     left: 5px;
     display: flex;
     justify-content: center;
@@ -10387,7 +10708,7 @@ input::placeholder{
     align-items: center;
 }
 .brite-desktop-not-tablet .konv-table-add-column:hover{
-    background-color: rgba(128, 128, 128, 0.11);
+    background-color: var(--konv-sidebar-bg);
 }
 .brite-mobile .konv-table-header .konv-table-add-column{
     opacity: 1 !important;
@@ -10407,6 +10728,7 @@ input::placeholder{
     background-image: url("https://britetodo.com/img/brite-blank.png");
     transition: 0.3s ease-in-out;
     position: relative;
+    cursor: pointer;
 }
 .active-cover-selected:after {
     content: '';
@@ -11138,14 +11460,13 @@ bottom: calc(var(--keyboard-height) - 0px) !important;
 .show-menu-floating {
     position: fixed;
     left: 0px;
-    top: 9px;
+    top: calc(var(--sat) +  9px);
     opacity: 1 !important;
     z-index: 9999;
     font-size: 20px;
 }
-.brite-tablet .show-menu-floating{
-    top: 30px !important;
-}
+
+
 @media (min-width: 652px) and (max-width: 900px){
     html:not(.left-side-bar-menu-visible) .desktop-sidebar-menu {
         transform: translateX(-100%);
@@ -11171,6 +11492,9 @@ bottom: calc(var(--keyboard-height) - 0px) !important;
     box-sizing: border-box;
     padding: 52px 0px 0px;
 }
+.brite-osx .desktop-sidebar-menu{
+    padding-top: 90px !important;
+}
 .brite-desktop .desktop-sidebar-menu {
     min-width: var(--hidden-padding);
 }
@@ -11180,7 +11504,7 @@ bottom: calc(var(--keyboard-height) - 0px) !important;
 .brite-tablet .main-menu-brite{
     font-size: 110%;
     padding-top: 4%;
-    margin-top: 6%;
+    margin-top: 15px;
 }
 .sidebar-item{
     display: flex !important;
@@ -11188,7 +11512,7 @@ bottom: calc(var(--keyboard-height) - 0px) !important;
     flex-direction: row !important;
     justify-content: flex-start !important;
     align-items: center !important;
-    height: 38px;
+    height: var(--sidebaritem-height);
     padding-left: 20px;
     border-radius: 7px;
     transition: 0.4s ease-in-out;
@@ -11247,8 +11571,8 @@ bottom: calc(var(--keyboard-height) - 0px) !important;
     transform: translateY(-50%);
     color: var(--lighter-color-b);
     font-size: 12px;
-    width: 20px !important;
-    height: 20px !important;
+    width: 25px !important;
+    height: 25px !important;
     min-width: 20px;
     display: flex;
     justify-content: center;
@@ -11418,6 +11742,12 @@ bottom: calc(var(--keyboard-height) - 0px) !important;
 .onchat-main-body-chat::-webkit-scrollbar-thumb {
     background-color: darkgrey;
     outline: 1px solid slategrey;
+}
+.searcher-main-messages-container {
+    z-index: 9999 !important;
+    position: absolute;
+    background-color: var(--konv-main-bg);
+    padding-top: calc(var(--sat) + 50px);
 }
 /*// --------end--end--end--end--   CHAT-SCROLL BAR    --end--end--end--end---------*/
 .konv-circle{
@@ -12164,16 +12494,16 @@ bottom: calc(var(--keyboard-height) - 0px) !important;
     border-right: none !important;
 }
 .konv-table-header .konv-table-cell{
-    border-top: 1px solid rgba(131, 131, 131, 0.34);
-    background-color: rgba(128, 128, 128, 0.05);
+    border-top: var(--border-style);
+    background-color: var(--konv-sidebar-bg);
 }
 .brite-desktop-not-tablet .konv-table-cell:hover{
     transition: 0.2s;
-    background-color: rgba(128, 128, 128, 0.05);
+    background-color: var(--konv-trans-light-bg);
 }
 .brite-desktop-not-tablet .konv-table-header .konv-table-cell:hover, .brite-desktop-not-tablet .konv-table-add-row:hover{
     transition: 0.2s;
-    background-color: rgba(128, 128, 128, 0.1);
+    background-color: var(--konv-sidebar-bg);
 }
 .konv-table-cell, .konv-table-add-row, .konv-table-add-column, .konv-table-row-settings {
     border-right: var(--border-style);
@@ -12335,6 +12665,10 @@ bottom: calc(var(--keyboard-height) - 0px) !important;
     max-width: 170px;
     overflow: hidden;
 }
+.konv-chat-file.openfile{
+    overflow: hidden;
+    width: 99%;
+}
 .konv-chat-load-more-messeges{
     margin: auto;
     margin-bottom: 35px;
@@ -12437,11 +12771,16 @@ bottom: calc(var(--keyboard-height) - 0px) !important;
     user-select: auto !important;
     word-break: break-word;
 }
+
 .sender-messege.docs{
     border: 1px solid var(--konv-main-color);
     padding: 10px 5px;
     border-radius: 5px;
     margin-top: 10px;
+}
+.details-context-menu-item i{
+    margin-right: 17px !important;
+    font-weight: 600 !important;
 }
 .viewedmessage {
     height: 17px;
@@ -12470,6 +12809,7 @@ bottom: calc(var(--keyboard-height) - 0px) !important;
     position: fixed;
     left: 0px;
     top: 0px;
+    -webkit-backdrop-filter: blur(10px);
 }
 div.spinner {
     position: absolute;
@@ -12584,11 +12924,7 @@ div.spinner div.bar12 {
     left: -20px;
 }
 /* mainwindow */
-.onchat-main-body-footer{
-    position: relative;
-    transition: 0.25s ease;
-    border-top: var(--border-style);
-}
+
 .onchat-main-body-chat {
     height: 90%;
     overflow-y: auto;
@@ -12719,8 +13055,7 @@ div.spinner div.bar12 {
     top: 0px !important;
     width: 25px;
     height: 25px;
-
-    border-radius: 6px;
+    border-radius: var(--radius-b-small);
 }
 .w-c-b{
     min-height: 42.5px;
@@ -12786,10 +13121,13 @@ div.spinner div.bar12 {
 }
 .konv-chat-messege-edit {
     position: absolute;
-    top: -57px;
+    top: -35px;
     background-color: #2e2e2e !important;
     padding: 8px;
     box-sizing: border-box;
+}
+.brite-mobile .konv-chat-messege-edit{
+    top: -55px;
 }
 .konv-theme-light .konv-chat-messege-edit{
     background-color: #fff !important;
@@ -12814,17 +13152,30 @@ div.spinner div.bar12 {
     gap: 4px;
     overflow-y: auto;
 }
-.brite-admin-style.brite-desktop .footer-aditional-bar{
+.brite-admin-style.brite-desktop-not-tablet .footer-aditional-bar{
     flex-direction: column !important;
-    right: -4% !important;
-    bottom: 50% !important;
+    right: -5% !important;
+    bottom: 100% !important;
     max-width: 59px !important;
-    transform: scale(0.8) !important;
+    transform: scale(0.6) !important;
     left: auto !important;
     position: absolute;
+    opacity: 0.6;
+    background-color: var(--konv-main-bg);
+    transition: 0.3s ease-in-out;
+    padding: 5px 5px;
+    border-radius: 10px;
 }
-.brite-admin-style.brite-desktop .modal-footer{
+.brite-admin-style.brite-desktop-not-tablet .footer-aditional-bar:hover{
+    opacity: 1;
+}
+.brite-admin-style.brite-desktop-not-tablet .footer-aditional-bar .property-label{
+    font-size: 12px !important;
+    display: none;
+}
+.brite-admin-style.brite-desktop-not-tablet .modal-footer{
     overflow: visible !important;
+    max-width: 94%;
 }
 
 .audio-player-brite{
@@ -12919,8 +13270,8 @@ div.spinner div.bar12 {
     border-radius: 100px;
 }
 .konv-user-icon-xl{
-    height: 105px;
-    width: 105px;
+    height: 125px;
+    width: 125px;
     min-width: 45px;
     background-size: cover;
     background-position: center center;
@@ -13218,8 +13569,8 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
     border-radius: 15px;
     min-height: 60px;
     min-width: 70px;
-    max-width: 70px !important;
-    width: 70px !important;
+    max-width: 70px;
+    width: 70px;
     margin: 0px 2px;
     color: var(--font-color-b) !important;
     flex-direction: column;
@@ -13399,7 +13750,7 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
     overflow-y: auto;
     overflow-x: hidden;
     max-height: 87% !important;
-    padding: 5px 0px 5px;
+    padding: 5px 10px 5px 0px;
 }
 .konv-kanban-container .b-c {
     background-color: var(--konv-cards-bg) !important;
@@ -13432,8 +13783,14 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
 .konv-kanban .konv-kanban-board {
     -webkit-box-flex: 0;
     flex: 0 0 280px;
-    margin-right: 20px;
+    padding-right: 10px;
     height: 100%;
+}
+.brite-admin-style .konv-kanban .konv-kanban-board:not(.add-new-stage){
+    background-color: var(--elevate-2);
+    border-radius: var(--radius-b);
+    padding: 10px 0px 0px 10px;
+    margin-right: 10px;
 }
 .board__header {
     position: relative;
@@ -13444,7 +13801,8 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
     user-select: none;
     margin-bottom: 0px;
     padding: 0px 5px 0px 15px;
-    height: 51px;
+    height: 50px;
+    margin-right: 10px;
     display: -webkit-box;
     display: flex;
     flex-direction: row;
@@ -13453,6 +13811,7 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
     background-color: var(--konv-cards-bg);
     border-radius: var(--radius-b);
     border: var(--border-style);
+    cursor: default;
 }
 .brite-desktop .board__header{
     height: 43px;
@@ -13491,7 +13850,7 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
 .brite-mobile .brite-switcher{
     min-height: 50px;
 }
-.brite-desktop .brite-switcher{
+.brite-desktop .small-switcher{
     min-height: 33px;
 }
 .brite-desktop .switcher-options-type{
@@ -13516,10 +13875,11 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
     padding: 5px 10px;
     min-height: 20px;
 }
-.brite-desktop.brite-admin-style .cal-scrol-area{
+.brite-desktop .cal-scrol-area{
     overflow-x: auto;
     max-height: calc(100vh - 112px);
     min-height: calc(100vh - 112px);
+    width: 100%;
 }
 .brite-desktop-not-tablet .regular-switcher .brite-switcher-elem:hover{
     background-color: var(--konv-main-color) !important;
@@ -13799,6 +14159,9 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
     opacity: 0;
     overflow: hidden;
 }
+.brite-desktop .dcard-tiny, .brite-desktop .brite-chat-modal{
+    --sat: 0px !important;
+}
 
 .brite-desktop .brite-side-modal-visible{
     opacity: 1;
@@ -13861,10 +14224,10 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
     bottom: calc(var(--keyboard-height) + 3px) !important;
     transition-delay: 0.25s !important;
 }
-/*.brite-tablet .dcard-title-focused .modal-footer{*/
-/*    bottom: calc(var(--keyboard-height) + 3px) !important;*/
-/*    transition-delay: 0.25s !important;*/
-/*}*/
+.brite-tablet.konv-keyboard-visible .dcard-title-focused .modal-footer{
+    bottom: calc(var(--keyboard-height) + 3px) !important;
+    transition-delay: 0.25s !important;
+}
 .brite-mobile .dcard-title-focused .save-new-entry-style{
     bottom: 12px !important;
 }
@@ -14140,6 +14503,9 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
     background-color: var(--konv-main-color) !important;
     transform: scale(1.05);
 }
+.brite-tablet.tablet-new-design .header-add-element{
+    display: none;
+}
 .brite-desktop-not-tablet .tc-cell:hover{
     background-color: var(--brite-gray) !important;
 }
@@ -14159,7 +14525,7 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
 .b-h-c {
     overflow: hidden !important;
     margin: 0px;
-    border-radius: 10px !important;
+    border-radius: 16px !important;
     /* box-shadow: 0px 0px 10px rgba(0,0,0,0.2), inset -20px -20px 40px rgba(8, 238, 128, 0.32); */
     width: 30% !important;
     max-width: 100px;
@@ -14191,6 +14557,7 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
 }
 .brite-desktop-not-tablet .b-c.card-style:not(.image-card):hover{
     box-shadow: 0px 10px 20px rgba(0,0,0,0.07);
+    filter: brightness(1.07) !important;
 }
 .b-bor-l{
     border: var(--border-style);
@@ -14257,8 +14624,16 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
     min-width: 200px;
     min-height: 310px;
     max-height: 310px;
+    height: 100%;
     box-sizing: border-box;
 }
+
+.brite-desktop [grid-style="grid"] .notebody .bc-p,
+.brite-desktop [grid-style="grid"] .notebody .bc-p .lock-preview{
+    height: 100%;
+}
+
+
 /*.brite-tablet [grid-style="grid"]:not(.extensions-grid) .b-c{*/
 /*    max-width: 220px;*/
 /*}*/
@@ -14268,7 +14643,11 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
     display: flex;
 }
 .bc-ch .bc-d, .bc-ch .bc-m, .bc-ch .bc-m, .bc-ch .bc-p{
-    margin-left: 35px;
+    margin-left: 31px;
+}
+
+.eventcard.bc-ch:not(.inline-event).b-c .bc-m{
+    margin-left: 22px;
 }
 [grid-style="list"] .bc-p, [grid-style="list"] .bc-d, [grid-style="list"] .users-in-project{
     max-height: 25px !important;
@@ -14360,7 +14739,7 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
 .brite-desktop-not-tablet .r-s .brite-menu-elem-icon{
     background-color: rgba(0,0,0,0) !important;
 }
-[grid-style="list"] .brite-context-menu-icon, .l-s .brite-context-menu-icon{
+[grid-style="list"] .b-c:not(.habit-big-card) .brite-context-menu-icon, .l-s:not(.habit-big-card) .brite-context-menu-icon{
     top: 50%;
     transform: translateY(-50%) !important;
     right: 2.5%;
@@ -14397,7 +14776,7 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
 .l-s.b-c.sidebar-item{
     padding-top: 0px !important;
     padding-bottom: 0px !important;
-    min-height: 35px !important;
+    min-height: var(--sidebaritem-height) !important;
     border-bottom: 0px !important;
     border-radius: 12px;
     margin-bottom: 10px;
@@ -14414,6 +14793,7 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
     text-overflow: ellipsis;
     font-weight: 500;
     white-space: nowrap;
+    display: block;
 }
 .brite-mobile .l-s.b-c.sidebar-item:not([data-depth]){
     min-height: 47px !important;
@@ -14540,11 +14920,11 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
     margin-left: 15px !important;
 }
 .bc-p .konv-editor-image{
-    max-width: 200px;
+    max-width: 200px !important;
     max-height: 130px !important;
     min-height: 130px !important;
     margin: 0px;
-    pointer-events: all !important;
+    /*pointer-events: all !important;*/
 }
 .bc-p .konv-table-cell{
     min-height: 10px !important;
@@ -14679,10 +15059,13 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
     font-weight: 600;
 }
 .brite-card-image i{
-    background-color: var(--konv-cards-bg);
+    /*background-color: var(--konv-cards-bg);*/
     padding: 5px;
     border-radius: 10px;
     font-size: 18px !important;
+}
+.project-card .brite-card-image i{
+    color: #fff;
 }
 .brite-main-screen-bg .color-bg{
     background-color: rgba(0,0,0,0) !important;
@@ -14706,7 +15089,7 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
     color: var(--konv-main-color) !important;
     background-color: var(--konv-trans-bg) !important;
 }
-.brite-main-screen-bg[data-viewmode="day-mode-timo"] .t-t-c, .brite-main-screen-bg .widget-grid, .brite-main-screen-bg .widget-grid, .brite-main-screen-bg .desktop-sidebar-menu, .brite-main-screen-bg .discover-search, .brite-main-screen-bg .events-timeline-details-card, .brite-main-screen-bg.brite-mobile .sheet-style-sidebar:not(.solid-background){
+.brite-main-screen-bg[data-viewmode="day-mode-timo"] .t-t-c:not(.bg-colored), .brite-main-screen-bg .widget-grid, .brite-main-screen-bg .widget-grid, .brite-main-screen-bg .desktop-sidebar-menu, .brite-main-screen-bg .discover-search, .brite-main-screen-bg .events-timeline-details-card, .brite-main-screen-bg.brite-mobile .sheet-style-sidebar:not(.solid-background){
     background-color: var(--konv-trans-bg) !important;
     -webkit-backdrop-filter: blur(25px) !important;
     backdrop-filter: blur(25px) !important;
@@ -14759,16 +15142,12 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
     background-color: var(--konv-trans-bg) !important;
     -webkit-backdrop-filter: blur(25px) !important;
     backdrop-filter: blur(25px) !important;
-    max-height: 1000px !important;
-    height: auto !important;
-    min-height: 165vh !important;
 }
 
 
 .brite-main-screen-bg .sticky-header .t-c-h{
     -webkit-backdrop-filter: blur(25px) !important;
     backdrop-filter: blur(25px) !important;
-    border-radius: 8.5px !important;
 }
 
 
@@ -14822,7 +15201,7 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
 .b-c .menu-expend-close{
     position: relative !important;
     top: 0px !important;
-    margin-right: 3px;
+    margin-right: -3px;
     transform: none !important;
 }
 
@@ -15196,13 +15575,19 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
 .brite-tablet .task-add-form-imput-wrap{
     width: 100% !important;
     margin: 0px !important;
+    padding: 2px 0px 0px;
 }
 .brite-tablet .add-new-task-brite-modal{
-    min-height: calc(var(--keyboard-height) + 100px);
-    border-radius: 12px 12px 0px 0px !important;
-    min-width: 100vw !important;
-    max-height: 66vh !important;
-    transform: translate3d(0%,100%,0) !important;
+    border-radius: 15px !important;
+    min-width: 55vw !important;
+    max-height: 15vh !important;
+    padding-top: 20px !important;
+    left: 23vw;
+    top: calc(100vh - var(--keyboard-height) - 17vh) !important;
+    transform: translateY(0%) !important;
+}
+.brite-tablet .add-new-task-brite-modal .brite-side-header{
+    display: none !important;
 }
 @media (max-width: 600px) {
 
@@ -15793,10 +16178,15 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
 .bg-colored:not(.project-card) i{
     color: #fff !important;
 }
+.bg-colored .add-button-label i{
+    color: var(--konv-main-color) !important;
+}
 .bg-colored .w-d-t:after{
     color: #fff !important;
 }
-.bg-colored  .bc-t{
+
+
+.bg-colored.b-c .bc-t, .bg-colored .l-s .bc-t:not(.konv-input){
     color: #fff !important;
 }
 [grid-style="list"] .b-c.bg-colored, .l-s.b-c.bg-colored{
@@ -16002,7 +16392,7 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
     width: 110% !important;
     margin-top: -6px !important;
     border-radius: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 1%;
     min-height: calc(175px + var(--sat)) !important;
     /*padding-top: calc(27% + var(--sat)) !important;*/
     padding-top: calc(100px + var(--sat)) !important;
@@ -16201,6 +16591,7 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
     position: absolute;
     right: 3%;
     bottom: 5px;
+    border-radius: 13px;
     background-color: var(--konv-trans-light-bg);
 }
 .counter-main-area{
@@ -16484,6 +16875,15 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
     font-size: 35px;
     color: var(--konv-main-color)
 }
+
+.lock-preview{
+    display: flex;
+    justify-content: center;
+    height: auto;
+    align-items: center;
+    color: var(--konv-main-color)
+}
+
 .currently-locked .modal-footer{
     opacity: 0 !important;
     pointer-events: none !important;
@@ -16531,4 +16931,67 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
 
 .appear-animation{
     transition: 300ms !important;
+}
+
+
+.freeformcard{
+    overflow: visible !important;
+    min-height: 65px !important;
+    border-radius: 25px !important;
+    margin-bottom: 14px !important;
+    padding: 18px 8px 0px 62px !important;
+    position: relative;
+    z-index: 4;
+}
+
+.freeformcard .brite-card-icon i {
+    color: inherit !important;
+}
+.freeformcard .event-left-market{
+    left: -26px !important;
+    height: 121%;
+    top: 54%;
+    z-index: -2;
+}
+.freeformcard .bc-t{
+    font-weight: 600;
+    font-size: 93% !important;
+    margin-bottom: 0px !important;
+}
+.freeformcard .btcom {
+    position: absolute !important;
+    left: -39px !important;
+    top: 29% !important;
+    z-index: 10;
+    background-color: var(--konv-main-bg);
+    border-radius: 100px !important;
+}
+
+/*.freeformcard .brite-card-icon{*/
+/*    position: absolute;*/
+/*    left: -50px;*/
+/*    height: 98%;*/
+/*    border-radius: 15px;*/
+/*}*/
+
+.freeformcard .brite-card-icon{
+    position: absolute;
+    left: 7px;
+    top: 0px;
+    height: 98%;
+    background-color: rgba(0,0,0,0) !important;
+}
+.freeformcard .bc-m{
+    margin-left: 0px !important;
+}
+
+.admin-modal{
+    z-index: 999999999999999999 !important;
+}
+
+.comminuty-post-modal .operator-form-konver{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
 }

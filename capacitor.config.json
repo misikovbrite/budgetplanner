@@ -1,14 +1,13 @@
 {
-  "appId": "io.konveier.timo",
-  "appName": "Brite",
+  "appId": "io.konveier.timo.budgetapp",
+  "appName": "Budget app",
   "webDir": "www",
-  "bundledWebRuntime": false,
+  "bundledWebRuntime": true,
 
   "plugins": {
     "Keyboard": {
       "resize": "body",
-      "style": "DARK",
-      "resizeOnFullScreen": true
+      "style": "DARK"
     },
     "SplashScreen": {
       "launchShowDuration": 3000,
@@ -17,7 +16,7 @@
       "backgroundColor": "#ffffffff",
       "androidSplashResourceName": "splash",
       "androidScaleType": "CENTER_CROP",
-      "showSpinner": true,
+      "showSpinner": true,Ј
       "androidSpinnerStyle": "large",
       "iosSpinnerStyle": "small",
       "spinnerColor": "#999999",
@@ -53,7 +52,8 @@
       "EnableWebGL": "false",
       "WindowSize": "1200x1000",
       "KeyboardDisplayRequiresUserAction": "false",
-      "HideKeyboardFormAccessoryBar": "true"
+      "HideKeyboardFormAccessoryBar": "true",
+      "PLAY_SERVICES_VERSION": "17.0.+"
     }
   }
 }

@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "912018847835",
+    "firebase_url": "https://brite-7b50c-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "brite-7b50c",
+    "storage_bucket": "brite-7b50c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912018847835:android:32b350a84e96e3ffb5a77e",
+        "android_client_info": {
+          "package_name": "io.konveier.timo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "912018847835-4lo3hv64kig5bsl8ci9q55me4oejo40q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.konveier.timo",
+            "certificate_hash": "94710120d7661380a956fe30cb4c59a458d5049e"
+          }
+        },
+        {
+          "client_id": "912018847835-q529h5o18ulko1k72v6h5nvsntogj1fp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9vv1-bqPMtnZ-fhu42RKwWJZxQ2ZWYbw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "912018847835-q529h5o18ulko1k72v6h5nvsntogj1fp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "912018847835-9j3jlgb4vfgbfmi81jhj7i6cru8u1njg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.konveier.timo",
+                "app_store_id": "1519999420"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

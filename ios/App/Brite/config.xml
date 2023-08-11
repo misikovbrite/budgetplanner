@@ -221,29 +221,4 @@
   </feature>
 
   
-  <preference name="DisallowOverscroll" value="true" />
-  <preference name="UIWebViewBounce" value="true" />
-  <preference name="SplashScreenDelay" value="1000" />
-  <preference name="IOS_UNIFORM_TYPE_IDENTIFIER" value="public.image" />
-  <preference name="AutoHideSplashScreen" value="true" />
-  <preference name="ShowSplashScreenSpinner" value="false" />
-  <preference name="FadeSplashScreen" value="true" />
-  <preference name="FadeSplashScreenDuration" value="500" />
-  <preference name="SuppressesLongPressGesture" value="true" />
-  <preference name="ServiceWorker" value="sw.js" />
-  <preference name="BackgroundColor" value="0x000000ff" />
-  <preference name="KeyboardStyle" value="dark" />
-  <preference name="KeyboardResizeMode" value="body" />
-  <preference name="KeyboardResize" value="false" />
-  <preference name="StatusBarStyle" value="blackopaque" />
-  <preference name="iosPersistentFileLocation" value="Library" />
-  <preference name="InAppBrowserOverrideUserAgent" value="Mozilla/5.0 Google" />
-  <preference name="UseSwiftLanguageVersion" value="5" />
-  <preference name="iosExtraFilesystemsвы" value="library,library-nosync,documents,documents-nosync,cache,bundle,root" />
-  <preference name="AllowInlineMediaPlayback" value="true" />
-  <preference name="EnableWebGL" value="false" />
-  <preference name="WindowSize" value="1200x1000" />
-  <preference name="KeyboardDisplayRequiresUserAction" value="false" />
-  <preference name="HideKeyboardFormAccessoryBar" value="true" />
-  <preference name="PLAY_SERVICES_VERSION" value="17.0.+" />
 </widget>

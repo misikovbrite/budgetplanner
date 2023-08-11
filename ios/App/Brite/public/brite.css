@@ -443,6 +443,7 @@ body {
     padding: 18px;
     opacity: 0;
     max-width: 400px !important;
+    background-color: var(--konv-cards-bg);
 }
 .brite-desktop .toast-middle{
     background-color: var(--konv-main-bg);
@@ -510,7 +511,6 @@ body {
     width: 50px !important;
     min-width: 50px;
     margin-right: 8px;
-    cursor: pointer;
     border-radius: 150px !important;
     max-height: 135px;
     transition: 0.4s ease-in-out;
@@ -904,6 +904,14 @@ label.konv-chat-file-upload-wrap.konv-chat-footer-elem.b-b-b {
     height: 100%;
     width: 100%;
 }
+.habits-units-label{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: -30px;
+    color: #fff;
+
+}
 .brite-icon-task {
     width: 95px;
     height: 95px;
@@ -1264,9 +1272,7 @@ label.konv-chat-file-upload-wrap.konv-chat-footer-elem.b-b-b {
 .brite-desktop .timeline-wrapper{
     min-height: 715px;
 }
-.ac{
-    cursor: pointer;
-}
+
 .preloadertimo {
     position: fixed;
     width: 100%;
@@ -1299,11 +1305,19 @@ label.konv-chat-file-upload-wrap.konv-chat-footer-elem.b-b-b {
     justify-content: space-between;
     position: relative;
 }
+
+
+.app-icon-option {
+    min-height: 70px;
+    background-size: cover;
+    min-width: 70px;
+    margin-bottom: 100px;
+}
 .brite-menu-elem-icon{
     width: 30px !important;
     height: 30px !important;
     min-width: 30px !important;
-    margin-right: 5px !important;
+    margin-right: 9px !important;
     border-radius: 10px;
     display: inline-flex !important;
     justify-content: center;
@@ -2096,11 +2110,12 @@ pre {
     min-width: 33px;
     text-align: center;
 }
-.completed:not(.eventcard) .bc-t{
+.completed .bc-t{
     color: var(--light-color-b) !important;
     transition: 0.5s;
     text-decoration: line-through;
 }
+
 .done-button{
     background-color: var(--konv-main-color);
     border-radius: 12px;
@@ -2698,13 +2713,17 @@ label.w-c-b {
 }
 
 
+.logo-page{
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 /*// -----------------------------------------------------------------*/
 /*// ------------------------       USERS         -------------------------*/
 /*// -----------------------------------------------------------------*/
 
-.password-lost-button{
-    cursor: pointer;
-}
 .picker-item span{
     padding: 0 1px !important;
 }
@@ -2767,6 +2786,7 @@ label.w-c-b {
     justify-content: center;
     box-sizing: border-box;
     border: 1px solid rgba(128, 128, 128, 0.41);
+    cursor: pointer;
 }
 .sign-wrapper{
     width: 80%;
@@ -2889,9 +2909,7 @@ label.w-c-b {
 /*// ------------------------       Task DETAILS         -------------------------*/
 /*// -----------------------------------------------------------------*/
 
-#set-reminder-task-details{
-    cursor: pointer;
-}
+
 .inline-chose-date{
     width: auto !important;
 }
@@ -3383,6 +3401,14 @@ label.w-c-b {
         transform: translateX(-50%) translateY(-50%);
         font-size: 20px !important;
         margin-top: 0px !important;
+        top: 0px !important;
+    }
+    .pomadoro-min .brite-side-header{
+        display: none !important;
+    }
+    .pomadoro-min .brite-sidebar-content{
+        width: 100% !important;
+        overflow: visible !important;
     }
 }
 .hide-pomadoro {
@@ -3886,7 +3912,7 @@ input.input-search-mention {
     width: 100% !Important;
     gap: 2% 4% !Important;
     margin-right: 10px;
-    padding-bottom: 200px;
+    padding-bottom: 350px;
 }
 .toggle-widget{
     margin-top: 20px;
@@ -4302,11 +4328,13 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
     top: 50%;
     transform: translateY(-50%);
 }
-.konv-keyboard-visible .universal-done-button{
+.konv-keyboard-visible .universal-done-button, .finance-keyboard-visible .universal-done-button{
     opacity: 1 !important;
     pointer-events: auto !important;
 }
+.signin-button{
 
+}
 .konv-keyboard-visible .context-detailed-card{
     opacity: 0 !important;
     pointer-events: none !important;
@@ -4337,6 +4365,11 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
     min-height: 70px;
     padding: 10px 8%;
     font-weight: 600 !important;
+}
+
+.kanban-floated-form{
+    max-height: 23px !important;
+    overflow: hidden !important;
 }
 @media (max-width: 600px) {
 
@@ -4376,6 +4409,10 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
         margin: 0px;
         max-height: 45vh !important;
         min-height: 55vh !important;
+    }
+    .small-modal-style{
+        max-height: 38vh !important;
+        min-height: 42vh !important;
     }
     .tiny-modal-style .modal-title{
         display: none !important;
@@ -5060,9 +5097,6 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
     background-size: cover;
     background-position: center center;
 }
-.proceed-to-registration {
-    cursor: pointer;
-}
 .timo-form-wrapper-reg {
     position: relative;
 }
@@ -5650,9 +5684,6 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
     .brite-desktop-not-tablet:hover .t-r-s{
         opacity: 1;
     }
-    .proceed-to-auth{
-        cursor: pointer;
-    }
     [data-currentactivepage="mainscreen"][data-viewmode="day-mode-timo"] #timeline-widgets-closeб, .visible-widgets-panel #timeline-widgets-close,[data-currentactivepage="mainscreen"][data-viewmode="timeline-mode-timo"] #timeline-widgets-close, [data-currentactivepage="mainscreen"][data-viewmode="freeform-mode-timo"] #timeline-widgets-close{
         opacity: 0;
         visibility: hidden;
@@ -5662,6 +5693,7 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
     }
     [data-currentactivepage="mainscreen"][data-viewmode="day-mode-timo"] .timeline-widgets-close{
         opacity: 0;
+        pointer-events: none;
     }
     .brite-footer-main{
         justify-content: start !important;
@@ -5802,7 +5834,7 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
     font-size: 12px;
     color: var(--light-color-b);
 }
-.eventcard .k-c-c{
+.eventcard:not(.inline-event) .k-c-c{
     width: 20px !important;
     height: 20px !important;
     top: 2px !important;
@@ -5840,6 +5872,8 @@ html:not(.brite-admin-style) [tct="quotes"] .w-b-a, [tct="weatherWIdget"] .w-b-a
     overflow-y: auto;
     padding-left: 35px;
     margin-left: -20px;
+    margin: auto;
+    max-width: 700px;
 }
 
 
@@ -6194,7 +6228,7 @@ div.picker {
     opacity:0;
     font-size: 20px;
     background-color: var(--konv-cards-bg);
-    top: 145px;
+    top: calc(var(--sat) + 115px);
     width: 55px;
     height: 55px;
     border-radius: 100px;
@@ -6717,25 +6751,25 @@ div.picker {
     display: flex;
     justify-content: center;
 }
-.c-m-c .eventcard:nth-child(1) {
+.c-m-c .eventcard:not(.konv-d-n):nth-child(1) {
     top: 0px !important;
 }
-.c-m-c .eventcard:nth-child(2) {
+.c-m-c .eventcard:not(.konv-d-n):nth-child(2) {
     top: 18px !important;
 }
-.c-m-c .eventcard:nth-child(3) {
+.c-m-c .eventcard:not(.konv-d-n):nth-child(3) {
     top: 33% !important
 }
-.c-m-c .eventcard:nth-child(4) {
+.c-m-c .eventcard:not(.konv-d-n):nth-child(4) {
     top: 54% !important;
 }
-.c-m-c .eventcard:nth-child(5){
+.c-m-c .eventcard:not(.konv-d-n):nth-child(5){
     top: 76% !important;
 }
-.brite-mobile .c-m-c .eventcard:nth-child(3){
+.brite-mobile .c-m-c .eventcard:not(.konv-d-n):nth-child(3){
     top: 39% !important;
 }
-.brite-mobile .c-m-c .eventcard:nth-child(4){
+.brite-mobile .c-m-c .eventcard:not(.konv-d-n):nth-child(4){
     top: 64% !important;
 }
 .details-inline-calendar {
@@ -10029,7 +10063,7 @@ input::placeholder{
     font-size: 12px !important;
 
 }
-.meditaition-modal:before {
+.meditaition-modal:before, .backdrop-modal:before {
     content: '';
     width: 100%;
     height: 100%;
@@ -10372,6 +10406,7 @@ input::placeholder{
     transition: 0.3s ease-in-out !important;
 
 }
+
 
 .editor-color-row{
     border-radius: 3px;
@@ -11035,9 +11070,6 @@ border-radius: 5px;
     transition: 0.4s ease-in-out;
     cursor: pointer !important;
 }
-.konv-editor-file-upload{
-    cursor: pointer;
-}
 .brite-desktop-not-tablet .konv-editor-upload-file-form:hover{
     background: var(--konv-main-color) !important;
     opacity: 0.5;
@@ -11194,6 +11226,9 @@ border-radius: 5px;
 
 .textAlign{
     fill: white;
+    cursor: pointer;
+}
+.cr-pt, .link-konver, .ac{
     cursor: pointer;
 }
 .block-editor{
@@ -11416,9 +11451,6 @@ border-radius: 5px;
     height: 35px !important;
     transform: scale(1.4);
 }
-.brite-addmenu-item{
-    cursor: pointer;
-}
 .brite-tablet.konv-keyboard-visible .task-form-task-section{.context-menu-item:not(.b-c) i, .context-menu-item:not(.b-c) svg
 bottom: calc(var(--keyboard-height) - 0px) !important;
 }
@@ -11442,7 +11474,6 @@ bottom: calc(var(--keyboard-height) - 0px) !important;
         min-width: 85%;
         display: flex;
         justify-content: space-between;
-        padding-left: 4px;
         box-sizing: border-box;
         align-items: center;
     }
@@ -13152,31 +13183,31 @@ div.spinner div.bar12 {
     gap: 4px;
     overflow-y: auto;
 }
-.brite-admin-style.brite-desktop-not-tablet .footer-aditional-bar{
-    flex-direction: column !important;
-    right: -5% !important;
-    bottom: 100% !important;
-    max-width: 59px !important;
-    transform: scale(0.6) !important;
-    left: auto !important;
-    position: absolute;
-    opacity: 0.6;
-    background-color: var(--konv-main-bg);
-    transition: 0.3s ease-in-out;
-    padding: 5px 5px;
-    border-radius: 10px;
-}
-.brite-admin-style.brite-desktop-not-tablet .footer-aditional-bar:hover{
-    opacity: 1;
-}
-.brite-admin-style.brite-desktop-not-tablet .footer-aditional-bar .property-label{
-    font-size: 12px !important;
-    display: none;
-}
-.brite-admin-style.brite-desktop-not-tablet .modal-footer{
-    overflow: visible !important;
-    max-width: 94%;
-}
+/*.brite-admin-style.brite-desktop-not-tablet .footer-aditional-bar{*/
+/*    flex-direction: column !important;*/
+/*    right: -5% !important;*/
+/*    bottom: 100% !important;*/
+/*    max-width: 59px !important;*/
+/*    transform: scale(0.6) !important;*/
+/*    left: auto !important;*/
+/*    position: absolute;*/
+/*    opacity: 0.6;*/
+/*    background-color: var(--konv-main-bg);*/
+/*    transition: 0.3s ease-in-out;*/
+/*    padding: 5px 5px;*/
+/*    border-radius: 10px;*/
+/*}*/
+/*.brite-admin-style.brite-desktop-not-tablet .footer-aditional-bar:hover{*/
+/*    opacity: 1;*/
+/*}*/
+/*.brite-admin-style.brite-desktop-not-tablet .footer-aditional-bar .property-label{*/
+/*    font-size: 12px !important;*/
+/*    display: none;*/
+/*}*/
+/*.brite-admin-style.brite-desktop-not-tablet .modal-footer{*/
+/*    overflow: visible !important;*/
+/*    max-width: 94%;*/
+/*}*/
 
 .audio-player-brite{
     bottom: 10px;
@@ -13416,7 +13447,10 @@ div.spinner div.bar12 {
 
     animation: none !important;
 }
-
+.editor-actions-visible .sel-hide{
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
 .brite-desktop .ui-selected:after{
     right: 6px;
     top: 46%;
@@ -13533,9 +13567,6 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
 .konv-drag-here span{
     color: #fff !important;
 }
-.link-konver{
-    cursor: pointer;
-}
 
 
 /*// ------------------------        CONFIGMENU        -------------------------*/
@@ -13628,10 +13659,10 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
     background-color: var(--konv-sidebar-bg) !important;
     box-sizing: border-box;
     margin: 0px 0px 20px !important;
-    text-align: center;
     border: none;
     color: var(--font-color-b);
     padding-left: 10% !important;
+    text-align: left;
 }
 .discover-search:focus{
     padding-left: 2% !important;
@@ -13876,15 +13907,16 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
     min-height: 20px;
 }
 .brite-desktop .cal-scrol-area{
-    overflow-x: auto;
+    overflow-y: auto;
     max-height: calc(100vh - 112px);
     min-height: calc(100vh - 112px);
     width: 100%;
+    overflow-x: hidden;
 }
 .brite-desktop-not-tablet .regular-switcher .brite-switcher-elem:hover{
     background-color: var(--konv-main-color) !important;
     color: var(--konv-main-color) !important;
-    transform: scale(1.04) !important;
+    transform: scale(1.02) !important;
 }
 .brite-desktop-not-tablet .regular-switcher .brite-switcher-elem.active-element-switcher-brite:hover{
     color: #fff !important;
@@ -14436,7 +14468,7 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
     box-shadow: 0px 10px 30px 0px rgba(0,0,0,0);
     bottom: 2%;
 }
-.brite-desktop-not-tablet .sheet-desktop-wide:not(.dcard-titlecard-edit-mode) .modal-footer{
+.brite-desktop-not-tablet .sheet-desktop-wide:not(.dcard-titlecard-edit-mode, .dcard-rigit-footer) .modal-footer{
     transform: translateY(111%) translateX(-50%);
 }
 .brite-desktop-not-tablet .sheet-desktop-wide .modal-footer:hover{
@@ -14839,6 +14871,9 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
     display: flex;
     align-items: center;
 }
+.title-big{
+    font-size: 120% !important;
+}
 [grid-style="list"] .b-c .bc-t{
     white-space: nowrap;
     overflow: hidden;
@@ -14901,8 +14936,21 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
 
 }
 
+.no-preview .bc-p{
+    opacity: 0 !important;
+}
+
 .l-s .bc-p .konv-editor-row{
     color: var(--light-color-b) !important;
+}
+
+.bc-p .brite-list-num{
+    height: 4px !important;
+    width: 10px !important;
+    left: 0px !important;
+}
+.bc-p .list-num-row .konv-editor-row{
+    margin-left: 16px !important;
 }
 
 .bc-p .bc-h{
@@ -15089,7 +15137,7 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
     color: var(--konv-main-color) !important;
     background-color: var(--konv-trans-bg) !important;
 }
-.brite-main-screen-bg[data-viewmode="day-mode-timo"] .t-t-c:not(.bg-colored), .brite-main-screen-bg .widget-grid, .brite-main-screen-bg .widget-grid, .brite-main-screen-bg .desktop-sidebar-menu, .brite-main-screen-bg .discover-search, .brite-main-screen-bg .events-timeline-details-card, .brite-main-screen-bg.brite-mobile .sheet-style-sidebar:not(.solid-background){
+.brite-main-screen-bg[data-viewmode="day-mode-timo"] .t-t-c:not(.bg-colored), .brite-main-screen-bg .widget-grid, .brite-main-screen-bg .widget-grid, .brite-main-screen-bg .desktop-sidebar-menu, .brite-main-screen-bg .discover-search, .brite-main-screen-bg .events-timeline-details-card, .brite-main-screen-bg.brite-mobile .sheet-style-sidebar:not(.solid-background), .brite-main-screen-bg .opac-bg{
     background-color: var(--konv-trans-bg) !important;
     -webkit-backdrop-filter: blur(25px) !important;
     backdrop-filter: blur(25px) !important;
@@ -16202,6 +16250,9 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
 .bg-colored .soft-statistics, .bg-colored .btcom:before{
     border-color: #fff !important;
 }
+.plancard:not(.bg-colored) .btcom:before{
+    border-color: var(--ligher-color-b) !important;
+}
 
 .text-colored-bc .bc-t, .text-colored-bc .konv-editor-row{
     color: inherit !important;
@@ -16995,3 +17046,6 @@ html:not(.brite-desktop-not-tablet) .select-mode-brite-editor .konv-editor-row-w
     left: 0px;
     width: 100%;
 }
+
+
+

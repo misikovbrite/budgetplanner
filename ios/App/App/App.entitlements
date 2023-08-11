@@ -32,7 +32,7 @@
 	<true/>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)io.konveier.timo</string>
+		<string>$(AppIdentifierPrefix)io.konveier.timo.budgetplanner</string>
 	</array>
 </dict>
 </plist>

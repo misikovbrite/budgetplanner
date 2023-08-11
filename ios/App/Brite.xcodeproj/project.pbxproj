@@ -13,12 +13,12 @@
 		504EC30D1FED79650016851F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 504EC30B1FED79650016851F /* Main.storyboard */; };
 		504EC30F1FED79650016851F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 504EC30E1FED79650016851F /* Assets.xcassets */; };
 		504EC3121FED79650016851F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 504EC3101FED79650016851F /* LaunchScreen.storyboard */; };
+		635FD9E6B1F1A896CD186ACD /* Pods_Budget_UP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6797C8583DCA701BA819623E /* Pods_Budget_UP.framework */; };
 		D81D98982A290717005634E2 /* public in Resources */ = {isa = PBXBuildFile; fileRef = D81D98972A290717005634E2 /* public */; };
 		D81D989A2A2907A1005634E2 /* public in Resources */ = {isa = PBXBuildFile; fileRef = D81D98992A2907A1005634E2 /* public */; };
 		D85BD7B92A04026F008F19AD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D85BD7B82A04026F008F19AD /* StoreKit.framework */; };
 		D85BD81A2A068025008F19AD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D85BD8182A068025008F19AD /* Localizable.strings */; };
 		D85BD83C2A0680A1008F19AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D85BD82C2A0680A1008F19AD /* InfoPlist.strings */; };
-		F24C93D07BBB462D944453FB /* Pods_Brite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 511305E3569D6DF363FF2CE2 /* Pods_Brite.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,13 +39,15 @@
 		20FB6D22EAAF0124DFCAB7ED /* Pods-Brite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brite.release.xcconfig"; path = "Target Support Files/Pods-Brite/Pods-Brite.release.xcconfig"; sourceTree = "<group>"; };
 		2FAD9762203C412B000D30F8 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = config.xml; sourceTree = "<group>"; };
 		50379B222058CBB4000EE86E /* capacitor.config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = capacitor.config.json; sourceTree = "<group>"; };
-		504EC3041FED79650016851F /* Brite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brite.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		504EC3041FED79650016851F /* Budget UP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Budget UP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		504EC3071FED79650016851F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		504EC30C1FED79650016851F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		504EC30E1FED79650016851F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		504EC3111FED79650016851F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		504EC3131FED79650016851F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		511305E3569D6DF363FF2CE2 /* Pods_Brite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6797C8583DCA701BA819623E /* Pods_Budget_UP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Budget_UP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D7A8F5C0E6FE9F062A47558 /* Pods-Budget UP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Budget UP.debug.xcconfig"; path = "Target Support Files/Pods-Budget UP/Pods-Budget UP.debug.xcconfig"; sourceTree = "<group>"; };
+		A9F0D04050E91DEF9AAA45B6 /* Pods-Budget UP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Budget UP.release.xcconfig"; path = "Target Support Files/Pods-Budget UP/Pods-Budget UP.release.xcconfig"; sourceTree = "<group>"; };
 		BF2350D067A7E6F2B2263550 /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
 		CA08624E8A323098338D2EDA /* Pods-Brite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brite.debug.xcconfig"; path = "Target Support Files/Pods-Brite/Pods-Brite.debug.xcconfig"; sourceTree = "<group>"; };
 		D81D98972A290717005634E2 /* public */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = public; path = Brite/public; sourceTree = SOURCE_ROOT; };
@@ -139,7 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D85BD7B92A04026F008F19AD /* StoreKit.framework in Frameworks */,
-				F24C93D07BBB462D944453FB /* Pods_Brite.framework in Frameworks */,
+				635FD9E6B1F1A896CD186ACD /* Pods_Budget_UP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +154,7 @@
 				D85BD7B82A04026F008F19AD /* StoreKit.framework */,
 				D85BD7BF2A04EFAF008F19AD /* WidgetKit.framework */,
 				D85BD7C12A04EFAF008F19AD /* SwiftUI.framework */,
-				511305E3569D6DF363FF2CE2 /* Pods_Brite.framework */,
+				6797C8583DCA701BA819623E /* Pods_Budget_UP.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -164,6 +166,8 @@
 				BF2350D067A7E6F2B2263550 /* Pods-App.release.xcconfig */,
 				CA08624E8A323098338D2EDA /* Pods-Brite.debug.xcconfig */,
 				20FB6D22EAAF0124DFCAB7ED /* Pods-Brite.release.xcconfig */,
+				6D7A8F5C0E6FE9F062A47558 /* Pods-Budget UP.debug.xcconfig */,
+				A9F0D04050E91DEF9AAA45B6 /* Pods-Budget UP.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -196,7 +200,7 @@
 		504EC3051FED79650016851F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				504EC3041FED79650016851F /* Brite.app */,
+				504EC3041FED79650016851F /* Budget UP.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -360,9 +364,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		504EC3031FED79650016851F /* Brite */ = {
+		504EC3031FED79650016851F /* Budget UP */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 504EC3161FED79650016851F /* Build configuration list for PBXNativeTarget "Brite" */;
+			buildConfigurationList = 504EC3161FED79650016851F /* Build configuration list for PBXNativeTarget "Budget UP" */;
 			buildPhases = (
 				1E006DDE888BC0B4BE8A2E65 /* [CP] Check Pods Manifest.lock */,
 				504EC3001FED79650016851F /* Sources */,
@@ -376,9 +380,9 @@
 			);
 			dependencies = (
 			);
-			name = Brite;
+			name = "Budget UP";
 			productName = App;
-			productReference = 504EC3041FED79650016851F /* Brite.app */;
+			productReference = 504EC3041FED79650016851F /* Budget UP.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -424,7 +428,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				504EC3031FED79650016851F /* Brite */,
+				504EC3031FED79650016851F /* Budget UP */,
 			);
 		};
 /* End PBXProject section */
@@ -464,7 +468,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Brite-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Budget UP-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -483,7 +487,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Brite/Pods-Brite-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Budget UP/Pods-Budget UP-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CD97524CE6078368807C81EA /* [CP] Copy Pods Resources */ = {
@@ -498,7 +502,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Brite/Pods-Brite-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Budget UP/Pods-Budget UP-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -694,10 +698,10 @@
 		};
 		504EC3171FED79650016851F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA08624E8A323098338D2EDA /* Pods-Brite.debug.xcconfig */;
+			baseConfigurationReference = 6D7A8F5C0E6FE9F062A47558 /* Pods-Budget UP.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon 5";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Brite/BriteDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -710,7 +714,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 0.0.1;
+				MARKETING_VERSION = 0.0.2;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DDEBUG\"";
 				PRODUCT_BUNDLE_IDENTIFIER = io.konveier.timo.budgetapp;
 				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = io.konveier.timo.budgetplanner;
@@ -721,16 +725,16 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,6";
+				TARGETED_DEVICE_FAMILY = "1,6";
 			};
 			name = Debug;
 		};
 		504EC3181FED79650016851F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 20FB6D22EAAF0124DFCAB7ED /* Pods-Brite.release.xcconfig */;
+			baseConfigurationReference = A9F0D04050E91DEF9AAA45B6 /* Pods-Budget UP.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon 5";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -744,7 +748,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 0.0.1;
+				MARKETING_VERSION = 0.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = io.konveier.timo.budgetplanner;
 				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = io.brite.budget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -753,7 +757,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,6";
+				TARGETED_DEVICE_FAMILY = "1,6";
 			};
 			name = Release;
 		};
@@ -769,7 +773,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		504EC3161FED79650016851F /* Build configuration list for PBXNativeTarget "Brite" */ = {
+		504EC3161FED79650016851F /* Build configuration list for PBXNativeTarget "Budget UP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				504EC3171FED79650016851F /* Debug */,
